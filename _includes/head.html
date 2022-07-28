@@ -1,0 +1,158 @@
+<style>
+    * {
+        --light_blue: #5bb4f1;
+        --blue: #6d81f4;
+        --dark_blue: #21295c;
+        --purple: #9d6ef5;
+        --light_purple: #cdb3f7;
+        --white: #fcf7f8;
+    }
+    .filetree {
+        --indent: 24px;
+        --icon-size: 15px;
+        --icon-offset: 10px;
+        --margin: 20px;
+        background-color: rgb(34, 34, 34);
+        position: relative;
+        border-left: 8px solid var(--purple);
+        border-radius: 6px;
+        line-break:loose;
+        color: rgb(189, 189, 189);
+        font-family: Menlo,Monaco,Consolas,Andale Mono,Ubuntu Mono,Courier New,monospace;
+        font-size: 14px;
+        margin-bottom: 24px;
+        padding: 10px;
+    }
+    .filetree ul li::marker {
+        content: " ";
+    }
+    .filetree ul {
+        padding-left: var(--indent) !important;
+        margin-bottom: 0;
+    }
+    .filetree ul li {
+        position: relative;
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='rgb(189, 189, 189)' viewBox='0 0 384 512'><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d='M0 64C0 28.65 28.65 0 64 0H224V128C224 145.7 238.3 160 256 160H384V448C384 483.3 355.3 512 320 512H64C28.65 512 0 483.3 0 448V64zM256 128V0L384 128H256z'/></svg>");
+        background-position: 0 2px;
+        padding-left: calc(var(--icon-size) + var(--icon-offset));
+        background-size: var(--icon-size) var(--icon-size);
+        background-repeat: no-repeat;
+    }
+    .filetree ul li.directory {
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='rgb(109, 129, 244)' viewBox='0 0 512 512'><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d='M512 144v288c0 26.5-21.5 48-48 48h-416C21.5 480 0 458.5 0 432v-352C0 53.5 21.5 32 48 32h160l64 64h192C490.5 96 512 117.5 512 144z'/></svg>");
+    }
+    .filetree ul li.directory-open {
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='rgb(109, 129, 244)' viewBox='0 0 576 512'><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d='M147.8 192H480V144C480 117.5 458.5 96 432 96h-160l-64-64h-160C21.49 32 0 53.49 0 80v328.4l90.54-181.1C101.4 205.6 123.4 192 147.8 192zM543.1 224H147.8C135.7 224 124.6 230.8 119.2 241.7L0 480h447.1c12.12 0 23.2-6.852 28.62-17.69l96-192C583.2 249 567.7 224 543.1 224z'/></svg>");
+    }
+    .filetree ul>li li:before {
+        position: absolute;
+        top: 10px;
+        left: calc(-1 * (var(--indent) + var(--icon-size) * 0.5 + var(--icon-offset)));
+        width: calc(var(--indent) + var(--icon-size) * 0.5);
+        height: 2px;
+        content: "";
+        background-color: rgb(189, 189, 189);
+    }
+    .filetree ul>li li:after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: calc(-1 * (var(--indent) + var(--icon-size) * 0.5 + var(--icon-offset)));
+        right: 0;
+        width: 2px;
+        height: 100%;
+        content: "";
+        background-color: rgb(189, 189, 189);
+    }
+    .filetree ul>li li:last-child:after {
+        height: 50%;    
+    }
+</style>
+
+<script>
+    let computeFileTrees = () => {
+        const filetrees = document.getElementsByClassName("filetree");
+        for (const filetree of filetrees) {
+            for(const item of filetree.getElementsByTagName("li")) {
+                const text = Array.from(item.childNodes).find(i => i.nodeName == "#text");
+                if (text == undefined) continue;
+                if (text.nodeValue.trim().startsWith("/")) {
+                    text.nodeValue = text.nodeValue.replace("/", "");
+                    if (item.children.length > 0) {
+                        item.classList.add("directory-open")
+                    } else {
+                        item.classList.add("directory")
+                    }
+                }
+            }
+        }
+    }
+
+    let tabIndex = 0
+    let syncTabs = () => {
+        const tabHeights = []
+        const tabDeltas = []
+        let currentTab = null
+        const sizeObserver = new ResizeObserver((e) => {
+            for (let i = 0; i < e.length; i++) {
+                tabDeltas[i] = e[i].contentRect.height - tabHeights[i]
+                tabHeights[i] = e[i].contentRect.height
+            }
+            if (currentTab != null) {
+                const sub = tabDeltas.slice(0, currentTab)
+                if (sub.length != 0) {
+                    window.scroll(window.scrollX, window.scrollY + sub.reduce((i, j) => i + j))
+                }
+                currentTab = null
+            }
+        })
+        const containers = document.getElementsByClassName("sync");
+        let setTab = (caller, i) => {
+            for (let j = 0; j < containers.length; j++) {
+                const container = containers[j]
+                const tab = container.firstChild.firstChild.children[i].children[0]
+                if (tab == caller) {
+                    currentTab = j
+                    continue;
+                }
+                tab.click()
+            }
+            tabIndex = i
+        }
+        tabIndex != 0 && setTab(null, tabIndex)
+        for (let j = 0; j < containers.length; j++) {
+            const container = containers[j]
+            tabHeights[j] = container.clientHeight
+            
+            sizeObserver.observe(container)
+            for (let i = 0; i < container.firstChild.firstChild.children.length; i++) {
+                const tab = container.firstChild.firstChild.children[i].children[0];
+                tab.addEventListener("click",(e) => e.isTrusted && setTab(tab, i), true);
+            }
+        }
+    }
+
+    let updatePlugins = () => {
+        if (document.documentElement.getAttribute("aria-busy") == "true") return;
+        computeFileTrees();
+        syncTabs();
+
+    }
+
+    window.onload = () => {
+        updatePlugins();
+        new MutationObserver(updatePlugins).observe(document.documentElement, {childList: true, attributes: true});
+    }
+</script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bb4f1">
+<meta name="apple-mobile-web-app-title" content="Joos Docs">
+<meta name="application-name" content="Joos Docs">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#5bb4f1">
+
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>

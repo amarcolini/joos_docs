@@ -1,0 +1,31 @@
+input: .
+output: .retype
+url: # Add your website address here
+branding:
+  label: Docs
+  logo: assets/logo.svg
+  colors:
+    label:
+      text: "#5bb4f1"
+      background: "#e1edff"
+include:
+ - "assets/"
+edit:
+  repo: "https://github.com/amarcolini/joos_docs"
+meta:
+  title: " - Joos Docs"
+links:
+- text: Source
+  link: https://github.com/amarcolini/joos
+  icon: mark-github
+  target: blank
+- text: Quickstart
+  link: https://github.com/amarcolini/joos_quickstart
+  icon: rocket
+  target: blank
+- text: Issues
+  link: https://github.com/amarcolini/joos/issues
+  icon: issue-opened
+  target: blank
+footer:
+  copyright: "&copy; Copyright Alessandro Marcolini 2022. All rights reserved."
