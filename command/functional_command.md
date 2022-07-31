@@ -49,4 +49,34 @@ FunctionalCommand(
 +++
 :::
 
+In addition, all of the `FunctionalCommand`'s properties are mutable, and so can be configured after creation:
+
+:::sync
++++ Java
+```java
+FunctionalCommand myCommand = new FunctionalCommand();
+
+myCommand.init = () -> {
+    //init
+};
+
+myCommand.setInterruptable(true);
+
+myCommand.getRequirements().add(myComponent);
+```
++++ Kotlin
+```kotlin
+val myCommand = FunctionalCommand()
+
+myCommand.init = Runnable {
+    //init
+}
+
+myCommand.isInterruptable = true
+
+myCommand.requirements += myComponent
+```
++++
+:::
+
 `FunctionalCommand`s can also be created through decoration. See this in action [here](/command/decorating.md#something).
