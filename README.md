@@ -14,7 +14,7 @@ Some features include:
 - Flexible command system
 - Complex trajectories, including waits and turns
 - Support for Mecanum, Tank, Swerve, and Differential Swerve out-of-the-box
-- An advanced multi-platform GUI
+- An advanced multi-platform GUI that supports draggable waypoints
 - Useful wrappers for Motors, Servos, Gamepads, and more
 
 To get started, head over to the installation page.
