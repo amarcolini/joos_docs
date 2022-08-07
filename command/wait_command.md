@@ -5,7 +5,7 @@ icon: dot-fill
 
 # WaitCommand
 
-A `WaitCommand` does simply that: waits a specified duration before ending. This command is useful for adding delay between actions. `WaitCommand`s can also be created through [decoration](/command/decorating.md#wait).
+A `WaitCommand` does simply that: waits a specified duration before ending. This command is useful for adding delay between actions.
 
 :::sync
 +++ Java

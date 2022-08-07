@@ -41,4 +41,6 @@ myCommand wait 4.0
 
 Here are all the shortcuts you can use to add functionality to your commands:
 
-[]
+!!!warning :construction: Warning :construction:
+This page is under construction. In the meantime, check the [kotlin](../kotlin_docs/) or [java](../java_docs/) docs.
+!!!

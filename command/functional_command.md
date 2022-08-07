@@ -78,5 +78,3 @@ myCommand.requirements += myComponent
 ```
 +++
 :::
-
-`FunctionalCommand`s can also be created through decoration. See this in action [here](/command/decorating.md#something).
