@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>scaleRange</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span></span>            </a>    </div>
+    <div>4.8.0
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="Command::com.amarcolini.joos.hardware/Servo/scaleRange/#kotlin.Double#kotlin.Double/PointingToDeclaration//-1658673126">
+  <div class="breadcrumbs"><a href="../../index.html">Command</a><span class="delimiter">/</span><a href="../index.html">com.amarcolini.joos.hardware</a><span class="delimiter">/</span><a href="index.html">Servo</a><span class="delimiter">/</span><a href="scale-range.html">scaleRange</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span>scale</span><wbr><span><span>Range</span></span></h1>
+  </div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="scale-range.html"><span class="token function">scaleRange</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">min<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">max<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Scales the available movement range of the servo to be a subset of its maximum range. Subsequent positioning calls will operate within that subset range. This is useful if your servo has only a limited useful range of movement due to the physical hardware that it is manipulating (as is often the case) but you don't want to have to manually scale and adjust the input to <a href="position.html">position</a> each time. For example, if <code class="lang-kotlin">scaleRange(0.2, 0.8)</code> is set; then servo positions will be scaled to fit in that range:</p><p class="paragraph"><code class="lang-kotlin">setPosition(0.0)</code> scales to <code class="lang-kotlin">0.2</code></p><p class="paragraph"><code class="lang-kotlin">setPosition(1.0)</code> scales to <code class="lang-kotlin">0.8</code></p><p class="paragraph"><code class="lang-kotlin">setPosition(0.5)</code> scales to <code class="lang-kotlin">0.5</code></p><p class="paragraph"><code class="lang-kotlin">setPosition(0.25)</code> scales to <code class="lang-kotlin">0.35</code></p><p class="paragraph"><code class="lang-kotlin">setPosition(0.75)</code> scales to <code class="lang-kotlin">0.65</code></p><p class="paragraph">Note the parameters passed here are relative to the underlying full range of motion of the servo, not its currently scaled range, if any. Thus, scaleRange(0.0, 1.0) will reset the servo to its full range of movement.</p><h2 class="">See also</h2><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="position.html"><span>com.</span><wbr><span>amarcolini.</span><wbr><span>joos.</span><wbr><span>hardware.</span><wbr><span>Servo</span></a></div></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div></div></div><br><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="scale-range.html"><span class="token function">scaleRange</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">min<span class="token operator">: </span><a href="../../../navigation/-navigation/com.amarcolini.joos.geometry/-angle/index.html">Angle</a><span class="token punctuation">, </span></span><span class="parameter ">max<span class="token operator">: </span><a href="../../../navigation/-navigation/com.amarcolini.joos.geometry/-angle/index.html">Angle</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Scales the available movement range of the servo to be a subset of its maximum range. Subsequent positioning calls will operate within that subset range. This is useful if your servo has only a limited useful range of movement due to the physical hardware that it is manipulating (as is often the case) but you don't want to have to manually adjust the input to <a href="position.html">position</a> each time. For example, if the range of the servo is 180°, and <code class="lang-kotlin">scaleRange(30°, 90°)</code> is set; then servo positions will be clamped to fit in that range:</p><p class="paragraph"><code class="lang-kotlin">setPosition(10°)</code> is clamped to <code class="lang-kotlin">30°</code></p><p class="paragraph"><code class="lang-kotlin">setPosition(135°)</code> is clamped to <code class="lang-kotlin">90°</code></p><p class="paragraph"><code class="lang-kotlin">setPosition(60°)</code> still becomes <code class="lang-kotlin">60°</code></p><p class="paragraph">And scaleRange(0°, 180°) would reset the servo to its full range of movement. Note that this also scales the position range as well.</p><h2 class="">See also</h2><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="position.html"><span>com.</span><wbr><span>amarcolini.</span><wbr><span>joos.</span><wbr><span>hardware.</span><wbr><span>Servo</span></a></div></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div></div></div></div></div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Made by Alessandro Marcolini</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+
