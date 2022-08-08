@@ -15,7 +15,6 @@ icon: download
 repositories {
     mavenCentral()
     google() // Needed for androidx
-    jcenter()  // Needed for tensorflow-lite
     maven { url = 'https://jitpack.io' }
     maven { url = 'https://maven.brott.dev/' }
     flatDir {
@@ -24,25 +23,25 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.firstinspires.ftc:Inspection:7.1.0'
-    implementation 'org.firstinspires.ftc:Blocks:7.1.0'
-    implementation 'org.firstinspires.ftc:Tfod:7.1.0'
-    implementation 'org.firstinspires.ftc:RobotCore:7.1.0'
-    implementation 'org.firstinspires.ftc:RobotServer:7.1.0'
-    implementation 'org.firstinspires.ftc:OnBotJava:7.1.0'
-    implementation 'org.firstinspires.ftc:Hardware:7.1.0'
-    implementation 'org.firstinspires.ftc:FtcCommon:7.1.0'
+    implementation 'org.firstinspires.ftc:Inspection:7.2.0'
+    implementation 'org.firstinspires.ftc:Blocks:7.2.0'
+    implementation 'org.firstinspires.ftc:Tfod:7.2.0'
+    implementation 'org.firstinspires.ftc:RobotCore:7.2.0'
+    implementation 'org.firstinspires.ftc:RobotServer:7.2.0'
+    implementation 'org.firstinspires.ftc:OnBotJava:7.2.0'
+    implementation 'org.firstinspires.ftc:Hardware:7.2.0'
+    implementation 'org.firstinspires.ftc:FtcCommon:7.2.0'
     implementation 'org.tensorflow:tensorflow-lite-task-vision:0.2.0'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'org.firstinspires.ftc:gameAssets-FreightFrenzy:1.0.0'
 
-    implementation 'com.github.amarcolini.joos:command:0.4.7-alpha'
+    implementation 'com.github.amarcolini.joos:command:0.4.8'
 }
 ```
 If you don't want to utilize all of Joos' capabilities, but just want its core navigation features, you can replace 'command'
 with 'navigation' in the import statement.
 
-3. Since Joos uses newer Java features, it isn't compatible with the Android SDK versions 23 and lower. In the `build.common.gradle` file, change `minSdkVersion` from 23 to 24:
+1. Since Joos uses newer Java features, it isn't compatible with Android SDK versions 23 and lower. In the `build.common.gradle` file, change `minSdkVersion` from 23 to 24:
 
 ```groovy !#6 build.common.gradle
 android {
@@ -100,13 +99,13 @@ apply from: '../build.dependencies.gradle'
 dependencies {
     implementation project(':FtcRobotController')
     annotationProcessor files('lib/OpModeAnnotationProcessor.jar')
-    annotationProcessor "com.github.amarcolini.joos.command:annotation:0.4.7-alpha"
+    annotationProcessor "com.github.amarcolini.joos.command:annotation:0.4.8"
 }
 ```
 
 If you're using Kotlin instead of Java, you'll have to use [KSP](https://kotlinlang.org/docs/ksp-overview.html) to install the annotation processor.
 
-5. That's it! Get started, or take a look at the [reference].
+5. That's it! Get started, or keep reading.
 
 ## Quickstart
 
@@ -115,3 +114,7 @@ You can download the quickstart from [this GitHub repository](https://github.com
 ![Downloading the Quickstart](assets/quickstart_download.gif)
 
 After that, you should be good to go! The quickstart comes with additional tuning OpModes, and for further instructions on those, head to the [quickstart reference].
+
+!!!warning :construction: Warning :construction:
+This section is under construction.
+!!!
