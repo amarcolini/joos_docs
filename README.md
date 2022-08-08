@@ -17,5 +17,5 @@ Some features include:
 - An advanced multi-platform GUI that supports draggable waypoints
 - Useful wrappers for Motors, Servos, Gamepads, and more
 
-To get started, head over to the installation page.
+To get started, head over to the [installation page](installation.md).
 

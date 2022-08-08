@@ -11,7 +11,7 @@ icon: download
 
 2. In the `build.dependencies.gradle` file, add the following lines to the repositories block and the Joos import in the dependencies block:
 
-```groovy #5-6,25 build.dependencies.gradle
+```groovy #4-5,24 build.dependencies.gradle
 repositories {
     mavenCentral()
     google() // Needed for androidx
@@ -38,10 +38,10 @@ dependencies {
     implementation 'com.github.amarcolini.joos:command:0.4.8'
 }
 ```
-If you don't want to utilize all of Joos' capabilities, but just want its core navigation features, you can replace 'command'
-with 'navigation' in the import statement.
 
-1. Since Joos uses newer Java features, it isn't compatible with Android SDK versions 23 and lower. In the `build.common.gradle` file, change `minSdkVersion` from 23 to 24:
+If you don't want to utilize all of Joos' capabilities, but just want its core navigation       features, you can replace 'command' with 'navigation' in the import statement.
+
+3. Since Joos uses newer Java features, it isn't compatible with Android SDK versions 23 and lower. In the `build.common.gradle` file, change `minSdkVersion` from 23 to 24:
 
 ```groovy !#6 build.common.gradle
 android {
