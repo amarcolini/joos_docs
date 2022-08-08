@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/joos_docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.713236391052">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.713246045312">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -34,12 +34,12 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/joos_docs/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../favicon.ico" rel="icon" />
-    <link href="../resources/css/retype.css?v=2.4.0.713236391052" rel="stylesheet" />
+    <link href="../resources/css/retype.css?v=2.4.0.713246045312" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.713236391052" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.713246045312" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.713236391052" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../resources/js/prism.js?v=2.4.0.713236391052" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.713246045312" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../resources/js/prism.js?v=2.4.0.713246045312" defer></script>
 
     <style>
         * {
@@ -445,7 +445,7 @@
 </ol>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
 <div class="codeblock-title">build.dependencies.gradle</div>
-<pre class="language-groovy" data-line="5-6,25"><code v-pre class="language-groovy">repositories {
+<pre class="language-groovy" data-line="4-5,24"><code v-pre class="language-groovy">repositories {
     mavenCentral()
     google() // Needed for androidx
     maven { url = 'https://jitpack.io' }
@@ -471,9 +471,8 @@ dependencies {
     implementation 'com.github.amarcolini.joos:command:0.4.8'
 }</code></pre>
 </doc-codeblock></div>
-<p>If you don&#x27;t want to utilize all of Joos&#x27; capabilities, but just want its core navigation features, you can replace &#x27;command&#x27;
-with &#x27;navigation&#x27; in the import statement.</p>
-<ol>
+<p>If you don&#x27;t want to utilize all of Joos&#x27; capabilities, but just want its core navigation       features, you can replace &#x27;command&#x27; with &#x27;navigation&#x27; in the import statement.</p>
+<ol start="3">
 <li>Since Joos uses newer Java features, it isn&#x27;t compatible with Android SDK versions 23 and lower. In the <code v-pre>build.common.gradle</code> file, change <code v-pre>minSdkVersion</code> from 23 to 24:</li>
 </ol>
 <div class="codeblock-wrapper"><doc-codeblock>
