@@ -12,6 +12,7 @@ include:
  - "assets/"
  - "java_docs/**"
  - "kotlin_docs/**"
+ - "web_gui/**"
  - "*.svg"
  - "*.png"
  - "*.xml"
