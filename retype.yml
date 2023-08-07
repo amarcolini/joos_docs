@@ -42,5 +42,8 @@ links:
   link: /java_docs/
   icon: book
   target: blank
+integrations:
+  googleAnalytics:
+    id: G-TBGELDQMF7
 footer:
   copyright: "&copy; Copyright Alessandro Marcolini 2022. All rights reserved."
