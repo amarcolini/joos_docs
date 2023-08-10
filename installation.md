@@ -99,7 +99,7 @@ apply from: '../build.dependencies.gradle'
 dependencies {
     implementation project(':FtcRobotController')
     annotationProcessor files('lib/OpModeAnnotationProcessor.jar')
-    annotationProcessor "com.github.amarcolini.joos.command:annotation:0.4.8"
+    annotationProcessor "com.github.amarcolini.joos:annotation:0.4.8"
 }
 ```
 
