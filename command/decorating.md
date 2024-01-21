@@ -39,8 +39,72 @@ myCommand wait 4.0
 +++
 :::
 
-Here are all the shortcuts you can use to add functionality to your commands:
+Here are some of the shortcuts you can use to add functionality to your commands:
 
-!!!warning :construction: Warning :construction:
-This page is under construction. In the meantime, check the [kotlin](../kotlin_docs/) or [java](../java_docs/) docs.
-!!!
+==- Delays
+:::sync
++++ Java
+```java
+//Original
+new SequentialCommand(
+        myCommand,
+        new WaitCommand(1.0)
+);
+
+//Shortcut
+myCommand.wait(1.0);
+```
++++ Kotlin
+```kotlin
+//Original
+SequentialCommand(
+    myCommand,
+    WaitCommand(1.0)
+)
+
+//Shortcut
+myCommand.wait(1.0)
+```
++++
+:::
+===
+==- Command Groups
+:::sync
++++ Java
+```java
+//Original
+new SequentialCommand(myCommand, otherCommand);
+
+new RaceCommand(myCommand, otherCommand);
+
+new ParallelCommand(myCommand, otherCommand);
+
+//Shortcut
+myCommand.then(otherCommand);
+
+myCommand.race(otherCommand);
+
+myCommand.and(otherCommand);
+```
++++ Kotlin
+```kotlin
+//Original
+SequentialCommand(myCommand, otherCommand)
+
+RaceCommand(myCommand, otherCommand)
+
+ParallelCommand(myCommand, otherCommand)
+
+
+//Shortcut
+myCommand.then(otherCommand)
+
+myCommand.race(otherCommand)
+
+myCommand.and(otherCommand)
+```
++++
+:::
+===
+
+For the rest of the ways you can decorate commands, see the [Kotlin docs](/kotlin_docs/command/com.amarcolini.joos.command/-command/index.html) or [Java docs](/java_docs/command/com.amarcolini.joos.command/-command/index.html).

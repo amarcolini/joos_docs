@@ -5,6 +5,10 @@ icon: device-desktop
 
 # JavaFX
 
+!!!warning :construction: Warning :construction:
+This version of the GUI is deprecated and will no longer be supported.
+!!!
+
 Path planning can be difficult when using coordinates without any sort of visualization. The Joos GUI aims to make path planning as smooth as possible, so all you have to worry about is where you want the robot to go, not how to make it get there. This is the currently stable version, but will be deprecated in the future. It will receive no further updates. To see the new GUI, head [here](./new.md).
 
 ![Opening the GUI](/assets/gui-preview.png)

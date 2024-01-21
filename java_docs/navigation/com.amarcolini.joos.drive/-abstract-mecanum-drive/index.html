@@ -1,221 +1,349 @@
 <!doctype html>
-<html>
+<html class="no-js">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>AbstractMecanumDrive</title>
-<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../../styles/style.css" rel="Stylesheet">
-<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
 <link href="../../../styles/main.css" rel="Stylesheet">
 <link href="../../../styles/prism.css" rel="Stylesheet">
 <link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
 <script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
-<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
-<div class="navigation-wrapper" id="navigation-wrapper">
-    <div id="leftToggler"><span class="icon-toggler"></span></div>
-    <div class="library-name">
-<a href="../../../index.html">
-<span></span>            </a>    </div>
-    <div>0.4.8
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            
+                    </a>            </div>
+            <div class="library-version">0.4.9
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":navigation:dokkaHtmlPartial/commonMain">common</button>
+        </div>
     </div>
-    <div class="pull-right d-flex">
-        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
-        <div id="searchBar"></div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
-</div>
-<div id="container">
-    <div id="leftColumn">
-        <div id="sideMenu"></div>
-    </div>
-    <div id="main">
-<div class="main-content" id="content" pageids="Navigation::com.amarcolini.joos.drive/AbstractMecanumDrive///PointingToDeclaration//1602680372">
-  <div class="breadcrumbs"><a href="../../index.html">Navigation</a><span class="delimiter">/</span><a href="../index.html">com.amarcolini.joos.drive</a><span class="delimiter">/</span><a href="index.html">AbstractMecanumDrive</a></div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="Navigation::com.amarcolini.joos.drive/AbstractMecanumDrive///PointingToDeclaration//1701142271">
+  <div class="breadcrumbs"><a href="../../index.html">Navigation</a><span class="delimiter">/</span><a href="../index.html">com.amarcolini.joos.drive</a><span class="delimiter">/</span><span class="current">AbstractMecanumDrive</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Abstract</span><wbr><span>Mecanum</span><wbr><span><span>Drive</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">class </span><a href="index.html">AbstractMecanumDrive</a><span class="token keyword"> extends </span><a href="../-drive/index.html">Drive</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">This class provides the basic functionality of a mecanum drive using <a href="../../com.amarcolini.joos.kinematics/-mecanum-kinematics/index.html">MecanumKinematics</a>.</p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">class </span><a href="index.html">AbstractMecanumDrive</a><span class="token keyword"> extends </span><a href="../-drive/index.html">Drive</a></div><p class="paragraph">This class provides the basic functionality of a mecanum drive using <a href="../../com.amarcolini.joos.kinematics/-mecanum-kinematics/index.html">MecanumKinematics</a>.</p><h4 class="">Parameters</h4><div class="table"><div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>track</span><wbr><span><span>Width</span></span></u></div></span></div><div><div class="title"><p class="paragraph">Lateral distance between pairs of wheels on different sides of the robot.</p></div></div></div></div><div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>wheel</span><wbr><span><span>Base</span></span></u></div></span></div><div><div class="title"><p class="paragraph">Distance between pairs of wheels on the same side of the robot.</p></div></div></div></div><div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>lateral</span><wbr><span><span>Multiplier</span></span></u></div></span></div><div><div class="title"><p class="paragraph">Lateral multiplier.</p></div></div></div></div></div></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Parameters">Parameters</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
     <div class="tabs-section-body">
-      <h2 class="">Parameters</h2>
-      <div data-togglable="Parameters">
-        <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="Parameters"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span><span>feedforward</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">motor feedforward coefficients</p></div></div></div></div></div><div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span>track</span><wbr><span><span>Width</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">lateral distance between pairs of wheels on different sides of the robot</p></div></div></div></div></div><div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span>wheel</span><wbr><span><span>Base</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">distance between pairs of wheels on the same side of the robot</p></div></div></div></div></div><div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span>lateral</span><wbr><span><span>Multiplier</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">lateral multiplier</p></div></div></div></div></div></div></div></div></div>
-      </div>
-      <h2 class="tabbedcontent">Constructors</h2>
-      <div class="table" data-togglable="Constructors"><a data-name="-2030843222%2FConstructors%2F1602680372" anchor-label="AbstractMecanumDrive" id="-2030843222%2FConstructors%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-abstract-mecanum-drive.html"><span>Abstract</span><wbr><span>Mecanum</span><wbr><span><span>Drive</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2030843222%2FConstructors%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">AbstractMecanumDrive</a>&nbsp;<a href="-abstract-mecanum-drive.html"><span class="token function">AbstractMecanumDrive</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="../../com.amarcolini.joos.control/-feedforward-coefficients/index.html">FeedforwardCoefficients</a>&nbsp;feedforward<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;wheelBase<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;lateralMultiplier</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-2030843222%2FConstructors%2F1602680372" anchor-label="AbstractMecanumDrive" id="-2030843222%2FConstructors%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-abstract-mecanum-drive.html"><span>Abstract</span><wbr><span>Mecanum</span><wbr><span><span>Drive</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2030843222%2FConstructors%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">AbstractMecanumDrive</a>&nbsp;<a href="-abstract-mecanum-drive.html"><span class="token function">AbstractMecanumDrive</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="../../com.amarcolini.joos.control/-feedforward-coefficients/index.html">FeedforwardCoefficients</a>&nbsp;feedforward<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;wheelBase</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-2030843222%2FConstructors%2F1602680372" anchor-label="AbstractMecanumDrive" id="-2030843222%2FConstructors%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-abstract-mecanum-drive.html"><span>Abstract</span><wbr><span>Mecanum</span><wbr><span><span>Drive</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2030843222%2FConstructors%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">AbstractMecanumDrive</a>&nbsp;<a href="-abstract-mecanum-drive.html"><span class="token function">AbstractMecanumDrive</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../../com.amarcolini.joos.control/-feedforward-coefficients/index.html">FeedforwardCoefficients</a>&nbsp;feedforward<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="1742967543%2FConstructors%2F1701142271" anchor-label="AbstractMecanumDrive" id="1742967543%2FConstructors%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-abstract-mecanum-drive.html"><span>Abstract</span><wbr><span>Mecanum</span><wbr><span><span>Drive</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1742967543%2FConstructors%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">AbstractMecanumDrive</a>&nbsp;<a href="-abstract-mecanum-drive.html"><span class="token function">AbstractMecanumDrive</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;wheelBase<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;lateralMultiplier<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../../com.amarcolini.joos.localization/-angle-sensor/index.html">AngleSensor</a>&nbsp;externalHeadingSensor</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">AbstractMecanumDrive</a>&nbsp;<a href="-abstract-mecanum-drive.html"><span class="token function">AbstractMecanumDrive</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;wheelBase<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;lateralMultiplier</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">AbstractMecanumDrive</a>&nbsp;<a href="-abstract-mecanum-drive.html"><span class="token function">AbstractMecanumDrive</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;wheelBase</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">AbstractMecanumDrive</a>&nbsp;<a href="-abstract-mecanum-drive.html"><span class="token function">AbstractMecanumDrive</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Functions</h2>
-      <div class="table" data-togglable="Functions"><a data-name="-688887519%2FFunctions%2F1602680372" anchor-label="getLocalizer" id="-688887519%2FFunctions%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="get-localizer.html"><span>get</span><wbr><span><span>Localizer</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-688887519%2FFunctions%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="../../com.amarcolini.joos.localization/-localizer/index.html">Localizer</a>&nbsp;<a href="get-localizer.html"><span class="token function">getLocalizer</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Localizer used to determine the evolution of <a href="../../../navigation/com.amarcolini.joos.drive/-abstract-mecanum-drive/pose-estimate.html">poseEstimate</a>.</p></div></div></div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1584154219%2FProperties%2F1701142271" anchor-label="externalHeadingSensor" id="-1584154219%2FProperties%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1584154219%2FProperties%2F1701142271"><span>external</span><wbr><span>Heading</span><wbr><span><span>Sensor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1584154219%2FProperties%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword">final </span><span class="token keyword"></span><a href="../../com.amarcolini.joos.localization/-angle-sensor/index.html">AngleSensor</a>&nbsp;<a href="index.html#-1584154219%2FProperties%2F1701142271">externalHeadingSensor</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-1722093919%2FFunctions%2F1602680372" anchor-label="getWheelPositions" id="-1722093919%2FFunctions%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="get-wheel-positions.html"><span>get</span><wbr><span>Wheel</span><wbr><span><span>Positions</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1722093919%2FFunctions%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a><span class="token operator">&gt;</span>&nbsp;<a href="get-wheel-positions.html"><span class="token function">getWheelPositions</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns the positions of the wheels in linear distance units. Positions should exactly match the ordering in <a href="set-motor-powers.html">setMotorPowers</a>.</p></div></div></div>
+<a data-name="1960591726%2FProperties%2F1701142271" anchor-label="lateralMultiplier" id="1960591726%2FProperties%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1960591726%2FProperties%2F1701142271"><span>lateral</span><wbr><span><span>Multiplier</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1960591726%2FProperties%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#1960591726%2FProperties%2F1701142271">lateralMultiplier</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="1241929620%2FFunctions%2F1602680372" anchor-label="getWheelVelocities" id="1241929620%2FFunctions%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="get-wheel-velocities.html"><span>get</span><wbr><span>Wheel</span><wbr><span><span>Velocities</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1241929620%2FFunctions%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a><span class="token operator">&gt;</span>&nbsp;<a href="get-wheel-velocities.html"><span class="token function">getWheelVelocities</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns the velocities of the wheels in linear distance units. Positions should exactly match the ordering in <a href="set-motor-powers.html">setMotorPowers</a>.</p></div></div></div>
+<a data-name="-1406726947%2FProperties%2F1701142271" anchor-label="localizer" id="-1406726947%2FProperties%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1406726947%2FProperties%2F1701142271"><span><span>localizer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1406726947%2FProperties%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword"></span><a href="../../com.amarcolini.joos.localization/-localizer/index.html">Localizer</a>&nbsp;<a href="index.html#-1406726947%2FProperties%2F1701142271">localizer</a></div><div class="brief "><p class="paragraph">Localizer used to determine the evolution of <a href="../../../navigation/com.amarcolini.joos.drive/-abstract-mecanum-drive/pose-estimate.html">poseEstimate</a>.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-337802785%2FFunctions%2F1602680372" anchor-label="setDrivePower" id="-337802785%2FFunctions%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="set-drive-power.html"><span>set</span><wbr><span>Drive</span><wbr><span><span>Power</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-337802785%2FFunctions%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="set-drive-power.html"><span class="token function">setDrivePower</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-pose2d/index.html">Pose2d</a>&nbsp;drivePower</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Sets the current commanded drive state of the robot. Feedforward is <i>not</i> applied to <a href="set-drive-power.html">drivePower</a>.</p></div></div></div>
+<a data-name="-955545223%2FProperties%2F1701142271" anchor-label="trackWidth" id="-955545223%2FProperties%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-955545223%2FProperties%2F1701142271"><span>track</span><wbr><span><span>Width</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-955545223%2FProperties%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#-955545223%2FProperties%2F1701142271">trackWidth</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="424970037%2FFunctions%2F1602680372" anchor-label="setDriveSignal" id="424970037%2FFunctions%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="set-drive-signal.html"><span>set</span><wbr><span>Drive</span><wbr><span><span>Signal</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="424970037%2FFunctions%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="set-drive-signal.html"><span class="token function">setDriveSignal</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../-drive-signal/index.html">DriveSignal</a>&nbsp;driveSignal</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Sets the current commanded drive state of the robot. Feedforward is applied to <a href="set-drive-signal.html">driveSignal</a> before it reaches the motors.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="2005294452%2FFunctions%2F1602680372" anchor-label="setLocalizer" id="2005294452%2FFunctions%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="set-localizer.html"><span>set</span><wbr><span><span>Localizer</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2005294452%2FFunctions%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="set-localizer.html"><span class="token function">setLocalizer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../../com.amarcolini.joos.localization/-localizer/index.html">Localizer</a>&nbsp;localizer</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Localizer used to determine the evolution of <a href="../../../navigation/com.amarcolini.joos.drive/-abstract-mecanum-drive/pose-estimate.html">poseEstimate</a>.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="209859392%2FFunctions%2F1602680372" anchor-label="setMotorPowers" id="209859392%2FFunctions%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="set-motor-powers.html"><span>set</span><wbr><span>Motor</span><wbr><span><span>Powers</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="209859392%2FFunctions%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="set-motor-powers.html"><span class="token function">setMotorPowers</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;frontLeft<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;rearLeft<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;rearRight<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;frontRight</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Sets the following motor powers (normalized voltages). All arguments are on the interval <code class="lang-kotlin">[-1.0, 1.0]</code>.</p></div></div></div>
+<a data-name="2054299898%2FProperties%2F1701142271" anchor-label="wheelBase" id="2054299898%2FProperties%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#2054299898%2FProperties%2F1701142271"><span>wheel</span><wbr><span><span>Base</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2054299898%2FProperties%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#2054299898%2FProperties%2F1701142271">wheelBase</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Properties</h2>
-      <div class="table" data-togglable="Properties"><a data-name="-1406726947%2FProperties%2F1602680372" anchor-label="localizer" id="-1406726947%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="index.html#-1406726947%2FProperties%2F1602680372"><span><span>localizer</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1406726947%2FProperties%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><a data-name="-1406726947%2FProperties%2F1602680372" anchor-label="localizer" id="-1406726947%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword"></span><a href="../../com.amarcolini.joos.localization/-localizer/index.html">Localizer</a>&nbsp;<a href="index.html#-1406726947%2FProperties%2F1602680372">localizer</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1406726947%2FProperties%2F1602680372" anchor-label="localizer" id="-1406726947%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a><p class="paragraph">Localizer used to determine the evolution of <a href="../../../navigation/com.amarcolini.joos.drive/-abstract-mecanum-drive/pose-estimate.html">poseEstimate</a>.</p></div></div></div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1476448217%2FFunctions%2F1701142271" anchor-label="getExternalHeadingSensor" id="1476448217%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-external-heading-sensor.html"><span>get</span><wbr><span>External</span><wbr><span>Heading</span><wbr><span><span>Sensor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1476448217%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">protected </span><span class="token keyword">final </span><span class="token keyword"></span><a href="../../com.amarcolini.joos.localization/-angle-sensor/index.html">AngleSensor</a>&nbsp;<a href="get-external-heading-sensor.html"><span class="token function">getExternalHeadingSensor</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1061742158%2FFunctions%2F1701142271" anchor-label="getLateralMultiplier" id="-1061742158%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-lateral-multiplier.html"><span>get</span><wbr><span>Lateral</span><wbr><span><span>Multiplier</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1061742158%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">protected </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;<a href="get-lateral-multiplier.html"><span class="token function">getLateralMultiplier</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-688887519%2FFunctions%2F1701142271" anchor-label="getLocalizer" id="-688887519%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-localizer.html"><span>get</span><wbr><span><span>Localizer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-688887519%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="../../com.amarcolini.joos.localization/-localizer/index.html">Localizer</a>&nbsp;<a href="get-localizer.html"><span class="token function">getLocalizer</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Localizer used to determine the evolution of <a href="../../../navigation/com.amarcolini.joos.drive/-abstract-mecanum-drive/pose-estimate.html">poseEstimate</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-177359435%2FFunctions%2F1701142271" anchor-label="getTrackWidth" id="-177359435%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-track-width.html"><span>get</span><wbr><span>Track</span><wbr><span><span>Width</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-177359435%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">protected </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;<a href="get-track-width.html"><span class="token function">getTrackWidth</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1522827970%2FFunctions%2F1701142271" anchor-label="getWheelBase" id="-1522827970%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-wheel-base.html"><span>get</span><wbr><span>Wheel</span><wbr><span><span>Base</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1522827970%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">protected </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;<a href="get-wheel-base.html"><span class="token function">getWheelBase</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1722093919%2FFunctions%2F1701142271" anchor-label="getWheelPositions" id="-1722093919%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-wheel-positions.html"><span>get</span><wbr><span>Wheel</span><wbr><span><span>Positions</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1722093919%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a><span class="token operator">&gt;</span>&nbsp;<a href="get-wheel-positions.html"><span class="token function">getWheelPositions</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Returns the positions of the wheels in linear distance units. Positions should exactly match the ordering in <a href="set-motor-powers.html">setMotorPowers</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1241929620%2FFunctions%2F1701142271" anchor-label="getWheelVelocities" id="1241929620%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-wheel-velocities.html"><span>get</span><wbr><span>Wheel</span><wbr><span><span>Velocities</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1241929620%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a><span class="token operator">&gt;</span>&nbsp;<a href="get-wheel-velocities.html"><span class="token function">getWheelVelocities</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Returns the velocities of the wheels in linear distance units. Positions should exactly match the ordering in <a href="set-motor-powers.html">setMotorPowers</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-337802785%2FFunctions%2F1701142271" anchor-label="setDrivePower" id="-337802785%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-drive-power.html"><span>set</span><wbr><span>Drive</span><wbr><span><span>Power</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-337802785%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="set-drive-power.html"><span class="token function">setDrivePower</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-pose2d/index.html">Pose2d</a>&nbsp;drivePower</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the current commanded drive state of the robot. Feedforward is <i>not</i> applied to <a href="set-drive-power.html">drivePower</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="424970037%2FFunctions%2F1701142271" anchor-label="setDriveSignal" id="424970037%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-drive-signal.html"><span>set</span><wbr><span>Drive</span><wbr><span><span>Signal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="424970037%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="set-drive-signal.html"><span class="token function">setDriveSignal</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../-drive-signal/index.html">DriveSignal</a>&nbsp;driveSignal</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the current commanded drive state of the robot. Feedforward is applied to <a href="set-drive-signal.html">driveSignal</a> before it reaches the motors.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2005294452%2FFunctions%2F1701142271" anchor-label="setLocalizer" id="2005294452%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-localizer.html"><span>set</span><wbr><span><span>Localizer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2005294452%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="set-localizer.html"><span class="token function">setLocalizer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../../com.amarcolini.joos.localization/-localizer/index.html">Localizer</a>&nbsp;localizer</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Localizer used to determine the evolution of <a href="../../../navigation/com.amarcolini.joos.drive/-abstract-mecanum-drive/pose-estimate.html">poseEstimate</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="209859392%2FFunctions%2F1701142271" anchor-label="setMotorPowers" id="209859392%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-motor-powers.html"><span>set</span><wbr><span>Motor</span><wbr><span><span>Powers</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="209859392%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="set-motor-powers.html"><span class="token function">setMotorPowers</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;frontLeft<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;backLeft<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;backRight<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;frontRight</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the following motor powers (normalized voltages). All arguments are on the interval <code class="lang-kotlin">[-1.0, 1.0]</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2098195617%2FFunctions%2F1701142271" anchor-label="setWheelVelocities" id="-2098195617%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-wheel-velocities.html"><span>set</span><wbr><span>Wheel</span><wbr><span><span>Velocities</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2098195617%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="set-wheel-velocities.html"><span class="token function">setWheelVelocities</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a><span class="token operator">&gt;</span>&nbsp;velocities<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a><span class="token operator">&gt;</span>&nbsp;accelerations</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the wheel velocities (and accelerations) of each motor, in distance units per second. Velocities and accelerations match the ordering in <a href="set-motor-powers.html">setMotorPowers</a>.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
@@ -227,8 +355,9 @@ if(savedDarkMode === true){
       <div class="footer">
         <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Made by Alessandro Marcolini</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
+            </div>
+        </div>
     </div>
-</div>
-
-</body></html>
+</body>
+</html>
 

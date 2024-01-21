@@ -27,13 +27,13 @@ new ListenerCommand(
 ```kotlin
 ListenerCommand(
     someCommand,
-    {
+    onInit = {
         //On init
     },
-    {
+    onExecute = {
         //On execute
     },
-    {
+    onEnd = {
         //On end
     }
 )

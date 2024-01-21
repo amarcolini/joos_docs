@@ -30,19 +30,19 @@ new FunctionalCommand(
 +++ Kotlin
 ```kotlin
 FunctionalCommand(
-    {
+    init = {
         //init
     },
-    {
+    execute = {
         //execute
     },
-    {
+    end = { interrupted ->
         //end
     },
-    {
+    isFinished = {
         //isFinished
         true
-    }, true,  //isInterruptable
+    }, isInterruptable = true,  //isInterruptable
     requirements
 )
 ```

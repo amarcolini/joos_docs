@@ -157,7 +157,7 @@ public class MyRobot extends Robot {
 
     @Override
     public void init() {
-        //Also doable: schedule(arm.retract());
+        //Also doable: register(arm);
         
         if (isInTeleOp) {
             //Maybe do stuff here
@@ -198,18 +198,22 @@ class MyRobot : Robot() {
 +++
 :::
 
-Once you have a `Robot` complete with components, rather than use a normal `OpMode` or `LinearOpMode`, you can use a `CommandOpMode` for all your TeleOp and Autonomous needs. It provides you with direct access to the `CommandScheduler`, a `MultipleGamepad`, and automatic handling of `Robot`s. To create one, simply extend it as you would a normal OpMode, and override the `preInit` method. Any telemetry sent in `preInit` will be updated immediately, and any commands scheduled or components registered will update once the OpMode starts. To register a `Robot`, call `registerRobot` in `preInit`. 
+Once you have a `Robot` complete with components, rather than use a normal `OpMode` or `LinearOpMode`, you can use a `CommandOpMode` for all your TeleOp and Autonomous needs. It provides you with direct access to the `CommandScheduler`, a `MultipleGamepad`, and automatic handling of `Robot`s. To create one, simply extend it as you would a normal OpMode, and override the `preInit` method. Any telemetry sent in `preInit` will be updated immediately, and any commands scheduled or components registered will update once the OpMode starts. To register a `Robot`, just create a non-final field annotated with `@Register` if using Java, or the `robot` delegate
+if using Kotlin.
 
 :::sync
 +++ Java
 ```java
 import com.amarcolini.joos.command.CommandOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
+@TeleOp
 public class MyOpMode extends CommandOpMode {
+    @Register
+    private MyRobot robot; //This will get automatically instantiated.
+
     @Override
     public void preInit() {
-        MyRobot robot = registerRobot(new MyRobot());
-        
         //This will update immediately after
         telem.addLine("Ready!");
         
@@ -223,11 +227,13 @@ public class MyOpMode extends CommandOpMode {
 +++ Kotlin
 ```kotlin
 import com.amarcolini.joos.command.CommandOpMode
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp
 
+@TeleOp
 class MyOpMode : CommandOpMode() {
-    override fun preInit() {
-        val robot = registerRobot(MyRobot())
+    private val robot by robot<MyRobot>()
 
+    override fun preInit() {
         //This will update immediately after
         telem.addLine("Ready!")
 

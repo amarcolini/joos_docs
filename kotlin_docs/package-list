@@ -4,14 +4,10 @@ $dokka.linkExtension:html
 module:Command
 com.amarcolini.joos.command
 com.amarcolini.joos.dashboard
+com.amarcolini.joos.extensions
 com.amarcolini.joos.gamepad
 com.amarcolini.joos.hardware
 com.amarcolini.joos.hardware.drive
-module:GUI
-com.amarcolini.joos.gui
-com.amarcolini.joos.gui.rendering
-com.amarcolini.joos.gui.style
-com.amarcolini.joos.gui.trajectory
 module:Navigation
 com.amarcolini.joos.control
 com.amarcolini.joos.drive
@@ -22,7 +18,7 @@ com.amarcolini.joos.localization
 com.amarcolini.joos.path
 com.amarcolini.joos.path.heading
 com.amarcolini.joos.profile
+com.amarcolini.joos.serialization
 com.amarcolini.joos.trajectory
-com.amarcolini.joos.trajectory.config
 com.amarcolini.joos.trajectory.constraints
 com.amarcolini.joos.util

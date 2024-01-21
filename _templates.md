@@ -28,3 +28,9 @@
 order: 100
 icon: dot-fill
 ---
+
+//Under construction template:
+
+!!!warning :construction: Warning :construction:
+This page is under construction.
+!!!

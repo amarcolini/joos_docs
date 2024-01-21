@@ -1,0 +1,269 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>PositionPathBuilder</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            
+                    </a>            </div>
+            <div class="library-version">0.4.9
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":navigation:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="Navigation::com.amarcolini.joos.path/PositionPathBuilder///PointingToDeclaration//1701142271">
+  <div class="breadcrumbs"><a href="../../index.html">Navigation</a><span class="delimiter">/</span><a href="../index.html">com.amarcolini.joos.path</a><span class="delimiter">/</span><span class="current">PositionPathBuilder</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Position</span><wbr><span>Path</span><wbr><span><span>Builder</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">PositionPathBuilder</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">startPos<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-vector2d/index.html">Vector2d</a><span class="token punctuation">, </span></span><span class="parameter ">startDeriv<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-vector2d/index.html">Vector2d</a><span class="token punctuation">, </span></span><span class="parameter ">startSecondDeriv<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-vector2d/index.html">Vector2d</a></span></span><span class="token punctuation">)</span></div><p class="paragraph">Easy-to-use builder for creating <a href="../-position-path/index.html">PositionPath</a> instances. Note that this builder does not respect tangent continuity.</p><h4 class="">Parameters</h4><div class="table"><div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>start</span><wbr><span><span>Pos</span></span></u></div></span></div><div><div class="title"><p class="paragraph">start position</p></div></div></div></div><div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>start</span><wbr><span><span>Deriv</span></span></u></div></span></div><div><div class="title"><p class="paragraph">start derivative</p></div></div></div></div><div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>start</span><wbr><span>Second</span><wbr><span><span>Deriv</span></span></u></div></span></div><div><div class="title"><p class="paragraph">start second derivative</p></div></div></div></div></div><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-path-builder/index.html"><span>Path</span><wbr><span><span>Builder</span></span></a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-1009288681%2FConstructors%2F1701142271" anchor-label="PositionPathBuilder" id="-1009288681%2FConstructors%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-position-path-builder.html"><span>Position</span><wbr><span>Path</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1009288681%2FConstructors%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">startPos<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-vector2d/index.html">Vector2d</a><span class="token punctuation">, </span></span><span class="parameter ">startTangent<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="../-position-path/index.html">PositionPath</a><span class="token punctuation">, </span></span><span class="parameter ">s<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">startPos<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-vector2d/index.html">Vector2d</a><span class="token punctuation">, </span></span><span class="parameter ">startDeriv<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-vector2d/index.html">Vector2d</a><span class="token punctuation">, </span></span><span class="parameter ">startSecondDeriv<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-vector2d/index.html">Vector2d</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-427137035%2FFunctions%2F1701142271" anchor-label="back" id="-427137035%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="back.html"><span><span>back</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-427137035%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="back.html"><span class="token function">back</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">distance<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">PositionPathBuilder</a></div><div class="brief "><p class="paragraph">Adds a line straight backward.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1772762314%2FFunctions%2F1701142271" anchor-label="build" id="-1772762314%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="build.html"><span><span>build</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1772762314%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="build.html"><span class="token function">build</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-position-path/index.html">PositionPath</a></div><div class="brief "><p class="paragraph">Constructs the <a href="../-position-path/index.html">PositionPath</a> instance.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-611138907%2FFunctions%2F1701142271" anchor-label="forward" id="-611138907%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="forward.html"><span><span>forward</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-611138907%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="forward.html"><span class="token function">forward</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">distance<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">PositionPathBuilder</a></div><div class="brief "><p class="paragraph">Adds a line straight forward.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2036443925%2FFunctions%2F1701142271" anchor-label="left" id="2036443925%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="left.html"><span><span>left</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2036443925%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="left.html"><span class="token function">left</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">distance<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">PositionPathBuilder</a></div><div class="brief "><p class="paragraph">Adds a segment that travels left in the robot reference frame.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1772044561%2FFunctions%2F1701142271" anchor-label="lineTo" id="-1772044561%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="line-to.html"><span>line</span><wbr><span><span>To</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1772044561%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="line-to.html"><span class="token function">lineTo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">endPosition<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-vector2d/index.html">Vector2d</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">PositionPathBuilder</a></div><div class="brief "><p class="paragraph">Adds a line segment with tangent heading interpolation.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1257314571%2FFunctions%2F1701142271" anchor-label="preBuild" id="1257314571%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="pre-build.html"><span>pre</span><wbr><span><span>Build</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1257314571%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="pre-build.html"><span class="token function">preBuild</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-position-path/index.html">PositionPath</a></div><div class="brief "><p class="paragraph">Constructs the <a href="../-path/index.html">Path</a> instance without reparameterizing the curves.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-887414020%2FFunctions%2F1701142271" anchor-label="right" id="-887414020%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="right.html"><span><span>right</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-887414020%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="right.html"><span class="token function">right</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">distance<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">PositionPathBuilder</a></div><div class="brief "><p class="paragraph">Adds a segment that travels right in the robot reference frame.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-696846719%2FFunctions%2F1701142271" anchor-label="splineTo" id="-696846719%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="spline-to.html"><span>spline</span><wbr><span><span>To</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-696846719%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="spline-to.html"><span class="token function">splineTo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">endPosition<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-vector2d/index.html">Vector2d</a><span class="token punctuation">, </span></span><span class="parameter ">endTangent<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a><span class="token punctuation">, </span></span><span class="parameter ">startTangentMag<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span>-1.0<span class="token punctuation">, </span></span><span class="parameter ">endTangentMag<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span>-1.0</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">PositionPathBuilder</a></div><div class="brief "><p class="paragraph">Adds a spline segment.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-54676926%2FFunctions%2F1701142271" anchor-label="turn" id="-54676926%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="turn.html"><span><span>turn</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-54676926%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="turn.html"><span class="token function">turn</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">angle<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a><span class="token punctuation">, </span></span><span class="parameter ">radius<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">PositionPathBuilder</a></div><div class="brief "><p class="paragraph">Adds a <a href="../-circular-arc/index.html">CircularArc</a> segment that turns <a href="turn.html">angle</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1085088763%2FFunctions%2F1701142271" anchor-label="turnLeft" id="1085088763%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="turn-left.html"><span>turn</span><wbr><span><span>Left</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1085088763%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="turn-left.html"><span class="token function">turnLeft</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">angle<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a><span class="token punctuation">, </span></span><span class="parameter ">radius<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">PositionPathBuilder</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="220995342%2FFunctions%2F1701142271" anchor-label="turnRight" id="220995342%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="turn-right.html"><span>turn</span><wbr><span><span>Right</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="220995342%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="turn-right.html"><span class="token function">turnRight</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">angle<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a><span class="token punctuation">, </span></span><span class="parameter ">radius<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">PositionPathBuilder</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Made by Alessandro Marcolini</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

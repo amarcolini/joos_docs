@@ -34,7 +34,7 @@ Component.of(
 
 `AbstractComponent` is an abstract version of `Component` with several utility methods that make your life easier.
 
-Currently, the only added functionality `AbstractComponent` provides is support for subcomponents, like `Motor`s and `Servo`s, that need their own update methods called, but aren't a separate component of the robot. To add a subcomponent, use `subcomponents.add()`, and if you override `update()`, make sure to insert a call to `super.update()` as well.
+Currently, the only added functionality `AbstractComponent` provides is support for subcomponents, like `Motor`s and `Servo`s, that need their own update methods called, but aren't a separate component of the robot. It also gives you `telem` to access [`SuperTelemetry`](/dashboard.md#supertelemetry). To add a subcomponent, use `subcomponents.add()`, and if you override `update()`, make sure to insert a call to `super.update()` as well.
 
 :::sync
 +++ Java

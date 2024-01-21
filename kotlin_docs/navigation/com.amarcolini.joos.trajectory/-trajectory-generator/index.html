@@ -1,183 +1,206 @@
 <!doctype html>
-<html>
+<html class="no-js">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>TrajectoryGenerator</title>
-<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../../styles/style.css" rel="Stylesheet">
-<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
 <link href="../../../styles/main.css" rel="Stylesheet">
 <link href="../../../styles/prism.css" rel="Stylesheet">
 <link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
 <script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
-<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
-<div class="navigation-wrapper" id="navigation-wrapper">
-    <div id="leftToggler"><span class="icon-toggler"></span></div>
-    <div class="library-name">
-<a href="../../../index.html">
-<span></span>            </a>    </div>
-    <div>0.4.8
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            
+                    </a>            </div>
+            <div class="library-version">0.4.9
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":navigation:dokkaHtmlPartial/commonMain">common</button>
+        </div>
     </div>
-    <div class="pull-right d-flex">
-        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
-        <div id="searchBar"></div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
-</div>
-<div id="container">
-    <div id="leftColumn">
-        <div id="sideMenu"></div>
-    </div>
-    <div id="main">
-<div class="main-content" id="content" pageids="Navigation::com.amarcolini.joos.trajectory/TrajectoryGenerator///PointingToDeclaration//1602680372">
-  <div class="breadcrumbs"><a href="../../index.html">Navigation</a><span class="delimiter">/</span><a href="../index.html">com.amarcolini.joos.trajectory</a><span class="delimiter">/</span><a href="index.html">TrajectoryGenerator</a></div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="Navigation::com.amarcolini.joos.trajectory/TrajectoryGenerator///PointingToDeclaration//1701142271">
+  <div class="breadcrumbs"><a href="../../index.html">Navigation</a><span class="delimiter">/</span><a href="../index.html">com.amarcolini.joos.trajectory</a><span class="delimiter">/</span><span class="current">TrajectoryGenerator</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Trajectory</span><wbr><span><span>Generator</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">TrajectoryGenerator</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Trajectory generator for creating trajectories with dynamic and static constraints from paths.</p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">TrajectoryGenerator</a></div><p class="paragraph">Trajectory generator for creating trajectories with dynamic and static constraints from paths.</p></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
     <div class="tabs-section-body">
-      <h2 class="">Functions</h2>
-      <div class="table" data-togglable="Functions"><a data-name="1300107843%2FFunctions%2F1602680372" anchor-label="convertMarkers" id="1300107843%2FFunctions%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="convert-markers.html"><span>convert</span><wbr><span><span>Markers</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1300107843%2FFunctions%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="convert-markers.html"><span class="token function">convertMarkers</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;segments<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-trajectory-segment/index.html">TrajectorySegment</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;temporalMarkers<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-temporal-marker/index.html">TemporalMarker</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;displacementMarkers<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-displacement-marker/index.html">DisplacementMarker</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;spatialMarkers<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-spatial-marker/index.html">SpatialMarker</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-trajectory-marker/index.html">TrajectoryMarker</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1300107843%2FFunctions%2F1701142271" anchor-label="convertMarkers" id="1300107843%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="convert-markers.html"><span>convert</span><wbr><span><span>Markers</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1300107843%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="convert-markers.html"><span class="token function">convertMarkers</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">segments<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-trajectory-segment/index.html">TrajectorySegment</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">temporalMarkers<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-temporal-marker/index.html">TemporalMarker</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">displacementMarkers<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-displacement-marker/index.html">DisplacementMarker</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">spatialMarkers<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-spatial-marker/index.html">SpatialMarker</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-trajectory-marker/index.html">TrajectoryMarker</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="1531633510%2FFunctions%2F1602680372" anchor-label="displacementToTime" id="1531633510%2FFunctions%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="displacement-to-time.html"><span>displacement</span><wbr><span>To</span><wbr><span><span>Time</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1531633510%2FFunctions%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="displacement-to-time.html"><span class="token function">displacementToTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">trajectory<span class="token operator">: </span><a href="../-trajectory/index.html">Trajectory</a><span class="token punctuation">, </span></span><span class="parameter ">s<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+<a data-name="1531633510%2FFunctions%2F1701142271" anchor-label="displacementToTime" id="1531633510%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="displacement-to-time.html"><span>displacement</span><wbr><span>To</span><wbr><span><span>Time</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1531633510%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="displacement-to-time.html"><span class="token function">displacementToTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">trajectory<span class="token operator">: </span><a href="../-trajectory/index.html">Trajectory</a><span class="token punctuation">, </span></span><span class="parameter ">s<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-350307266%2FFunctions%2F1602680372" anchor-label="generatePathTrajectorySegment" id="-350307266%2FFunctions%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="generate-path-trajectory-segment.html"><span>generate</span><wbr><span>Path</span><wbr><span>Trajectory</span><wbr><span><span>Segment</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-350307266%2FFunctions%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="generate-path-trajectory-segment.html"><span class="token function">generatePathTrajectorySegment</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;path<span class="token operator">: </span><a href="../../com.amarcolini.joos.path/-path/index.html">Path</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;velocityConstraint<span class="token operator">: </span><a href="../../com.amarcolini.joos.trajectory.constraints/-trajectory-velocity-constraint/index.html">TrajectoryVelocityConstraint</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;accelerationConstraint<span class="token operator">: </span><a href="../../com.amarcolini.joos.trajectory.constraints/-trajectory-acceleration-constraint/index.html">TrajectoryAccelerationConstraint</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;start<span class="token operator">: </span><a href="../../com.amarcolini.joos.profile/-motion-state/index.html">MotionState</a><span class="token operator"> = </span>MotionState(0.0, 0.0, 0.0)<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;goal<span class="token operator">: </span><a href="../../com.amarcolini.joos.profile/-motion-state/index.html">MotionState</a><span class="token operator"> = </span>MotionState(path.length(), 0.0, 0.0)<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;resolution<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span><span class="token constant">0.25</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-path-trajectory-segment/index.html">PathTrajectorySegment</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Generates a dynamic constraint path trajectory segment.</p></div></div></div>
+<a data-name="-350307266%2FFunctions%2F1701142271" anchor-label="generatePathTrajectorySegment" id="-350307266%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="generate-path-trajectory-segment.html"><span>generate</span><wbr><span>Path</span><wbr><span>Trajectory</span><wbr><span><span>Segment</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-350307266%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="generate-path-trajectory-segment.html"><span class="token function">generatePathTrajectorySegment</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="../../com.amarcolini.joos.path/-path/index.html">Path</a><span class="token punctuation">, </span></span><span class="parameter ">velocityConstraint<span class="token operator">: </span><a href="../../com.amarcolini.joos.trajectory.constraints/-trajectory-velocity-constraint/index.html">TrajectoryVelocityConstraint</a><span class="token punctuation">, </span></span><span class="parameter ">accelerationConstraint<span class="token operator">: </span><a href="../../com.amarcolini.joos.trajectory.constraints/-trajectory-acceleration-constraint/index.html">TrajectoryAccelerationConstraint</a><span class="token punctuation">, </span></span><span class="parameter ">start<span class="token operator">: </span><a href="../../com.amarcolini.joos.profile/-motion-state/index.html">MotionState</a><span class="token operator"> = </span>MotionState(0.0, 0.0, 0.0)<span class="token punctuation">, </span></span><span class="parameter ">goal<span class="token operator">: </span><a href="../../com.amarcolini.joos.profile/-motion-state/index.html">MotionState</a><span class="token operator"> = </span>MotionState(path.length(), 0.0, 0.0)<span class="token punctuation">, </span></span><span class="parameter ">resolution<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span><span class="token constant">0.25</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-path-trajectory-segment/index.html">PathTrajectorySegment</a></div><div class="brief "><p class="paragraph">Generates a dynamic constraint path trajectory segment.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-825526624%2FFunctions%2F1602680372" anchor-label="generateProfile" id="-825526624%2FFunctions%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="generate-profile.html"><span>generate</span><wbr><span><span>Profile</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-825526624%2FFunctions%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="generate-profile.html"><span class="token function">generateProfile</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;path<span class="token operator">: </span><a href="../../com.amarcolini.joos.path/-path/index.html">Path</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;velocityConstraint<span class="token operator">: </span><a href="../../com.amarcolini.joos.trajectory.constraints/-trajectory-velocity-constraint/index.html">TrajectoryVelocityConstraint</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;accelerationConstraint<span class="token operator">: </span><a href="../../com.amarcolini.joos.trajectory.constraints/-trajectory-acceleration-constraint/index.html">TrajectoryAccelerationConstraint</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;start<span class="token operator">: </span><a href="../../com.amarcolini.joos.profile/-motion-state/index.html">MotionState</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;goal<span class="token operator">: </span><a href="../../com.amarcolini.joos.profile/-motion-state/index.html">MotionState</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;resolution<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.amarcolini.joos.profile/-motion-profile/index.html">MotionProfile</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+<a data-name="-825526624%2FFunctions%2F1701142271" anchor-label="generateProfile" id="-825526624%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="generate-profile.html"><span>generate</span><wbr><span><span>Profile</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-825526624%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="generate-profile.html"><span class="token function">generateProfile</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="../../com.amarcolini.joos.path/-path/index.html">Path</a><span class="token punctuation">, </span></span><span class="parameter ">velocityConstraint<span class="token operator">: </span><a href="../../com.amarcolini.joos.trajectory.constraints/-trajectory-velocity-constraint/index.html">TrajectoryVelocityConstraint</a><span class="token punctuation">, </span></span><span class="parameter ">accelerationConstraint<span class="token operator">: </span><a href="../../com.amarcolini.joos.trajectory.constraints/-trajectory-acceleration-constraint/index.html">TrajectoryAccelerationConstraint</a><span class="token punctuation">, </span></span><span class="parameter ">start<span class="token operator">: </span><a href="../../com.amarcolini.joos.profile/-motion-state/index.html">MotionState</a><span class="token punctuation">, </span></span><span class="parameter ">goal<span class="token operator">: </span><a href="../../com.amarcolini.joos.profile/-motion-state/index.html">MotionState</a><span class="token punctuation">, </span></span><span class="parameter ">resolution<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.amarcolini.joos.profile/-motion-profile/index.html">MotionProfile</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="741150697%2FFunctions%2F1602680372" anchor-label="generateSimplePathTrajectorySegment" id="741150697%2FFunctions%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="generate-simple-path-trajectory-segment.html"><span>generate</span><wbr><span>Simple</span><wbr><span>Path</span><wbr><span>Trajectory</span><wbr><span><span>Segment</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="741150697%2FFunctions%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="generate-simple-path-trajectory-segment.html"><span class="token function">generateSimplePathTrajectorySegment</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;path<span class="token operator">: </span><a href="../../com.amarcolini.joos.path/-path/index.html">Path</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;maxProfileVel<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;maxProfileAccel<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;maxProfileJerk<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;start<span class="token operator">: </span><a href="../../com.amarcolini.joos.profile/-motion-state/index.html">MotionState</a><span class="token operator"> = </span>MotionState(0.0, 0.0, 0.0, 0.0)<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;goal<span class="token operator">: </span><a href="../../com.amarcolini.joos.profile/-motion-state/index.html">MotionState</a><span class="token operator"> = </span>MotionState(path.length(), 0.0, 0.0, 0.0)</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-path-trajectory-segment/index.html">PathTrajectorySegment</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Generates a simple constraint path trajectory segment.</p></div></div></div>
+<a data-name="741150697%2FFunctions%2F1701142271" anchor-label="generateSimplePathTrajectorySegment" id="741150697%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="generate-simple-path-trajectory-segment.html"><span>generate</span><wbr><span>Simple</span><wbr><span>Path</span><wbr><span>Trajectory</span><wbr><span><span>Segment</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="741150697%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="generate-simple-path-trajectory-segment.html"><span class="token function">generateSimplePathTrajectorySegment</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="../../com.amarcolini.joos.path/-path/index.html">Path</a><span class="token punctuation">, </span></span><span class="parameter ">maxProfileVel<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">maxProfileAccel<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">maxProfileJerk<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">start<span class="token operator">: </span><a href="../../com.amarcolini.joos.profile/-motion-state/index.html">MotionState</a><span class="token operator"> = </span>MotionState(0.0, 0.0, 0.0, 0.0)<span class="token punctuation">, </span></span><span class="parameter ">goal<span class="token operator">: </span><a href="../../com.amarcolini.joos.profile/-motion-state/index.html">MotionState</a><span class="token operator"> = </span>MotionState(path.length(), 0.0, 0.0, 0.0)</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-path-trajectory-segment/index.html">PathTrajectorySegment</a></div><div class="brief "><p class="paragraph">Generates a simple constraint path trajectory segment.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="1333113811%2FFunctions%2F1602680372" anchor-label="generateSimpleProfile" id="1333113811%2FFunctions%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="generate-simple-profile.html"><span>generate</span><wbr><span>Simple</span><wbr><span><span>Profile</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1333113811%2FFunctions%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="generate-simple-profile.html"><span class="token function">generateSimpleProfile</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;maxProfileVel<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;maxProfileAccel<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;maxProfileJerk<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;start<span class="token operator">: </span><a href="../../com.amarcolini.joos.profile/-motion-state/index.html">MotionState</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;goal<span class="token operator">: </span><a href="../../com.amarcolini.joos.profile/-motion-state/index.html">MotionState</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;overshoot<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.amarcolini.joos.profile/-motion-profile/index.html">MotionProfile</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+<a data-name="1333113811%2FFunctions%2F1701142271" anchor-label="generateSimpleProfile" id="1333113811%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="generate-simple-profile.html"><span>generate</span><wbr><span>Simple</span><wbr><span><span>Profile</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1333113811%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="generate-simple-profile.html"><span class="token function">generateSimpleProfile</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">maxProfileVel<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">maxProfileAccel<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">maxProfileJerk<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">start<span class="token operator">: </span><a href="../../com.amarcolini.joos.profile/-motion-state/index.html">MotionState</a><span class="token punctuation">, </span></span><span class="parameter ">goal<span class="token operator">: </span><a href="../../com.amarcolini.joos.profile/-motion-state/index.html">MotionState</a><span class="token punctuation">, </span></span><span class="parameter ">overshoot<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.amarcolini.joos.profile/-motion-profile/index.html">MotionProfile</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="852553305%2FFunctions%2F1602680372" anchor-label="generateTrajectory" id="852553305%2FFunctions%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="generate-trajectory.html"><span>generate</span><wbr><span><span>Trajectory</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="852553305%2FFunctions%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="generate-trajectory.html"><span class="token function">generateTrajectory</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;segments<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-trajectory-segment/index.html">TrajectorySegment</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;temporalMarkers<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-temporal-marker/index.html">TemporalMarker</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;displacementMarkers<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-displacement-marker/index.html">DisplacementMarker</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;spatialMarkers<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-spatial-marker/index.html">SpatialMarker</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-trajectory/index.html">Trajectory</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Generates a trajectory.</p></div></div></div>
+<a data-name="852553305%2FFunctions%2F1701142271" anchor-label="generateTrajectory" id="852553305%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="generate-trajectory.html"><span>generate</span><wbr><span><span>Trajectory</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="852553305%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="generate-trajectory.html"><span class="token function">generateTrajectory</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">segments<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-trajectory-segment/index.html">TrajectorySegment</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">temporalMarkers<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-temporal-marker/index.html">TemporalMarker</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">displacementMarkers<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-displacement-marker/index.html">DisplacementMarker</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">spatialMarkers<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-spatial-marker/index.html">SpatialMarker</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-trajectory/index.html">Trajectory</a></div><div class="brief "><p class="paragraph">Generates a trajectory.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-307748930%2FFunctions%2F1602680372" anchor-label="generateTurnSegment" id="-307748930%2FFunctions%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="generate-turn-segment.html"><span>generate</span><wbr><span>Turn</span><wbr><span><span>Segment</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-307748930%2FFunctions%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="generate-turn-segment.html"><span class="token function">generateTurnSegment</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;pose<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-pose2d/index.html">Pose2d</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;angle<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;maxAngVel<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;maxAngAccel<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;maxAngJerk<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;overshoot<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-turn-segment/index.html">TurnSegment</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Generates a turn segment.</p></div></div></div>
+<a data-name="-307748930%2FFunctions%2F1701142271" anchor-label="generateTurnSegment" id="-307748930%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="generate-turn-segment.html"><span>generate</span><wbr><span>Turn</span><wbr><span><span>Segment</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-307748930%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="generate-turn-segment.html"><span class="token function">generateTurnSegment</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">pose<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-pose2d/index.html">Pose2d</a><span class="token punctuation">, </span></span><span class="parameter ">angle<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a><span class="token punctuation">, </span></span><span class="parameter ">maxAngVel<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a><span class="token punctuation">, </span></span><span class="parameter ">maxAngAccel<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a><span class="token punctuation">, </span></span><span class="parameter ">maxAngJerk<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a><span class="token punctuation">, </span></span><span class="parameter ">overshoot<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-turn-segment/index.html">TurnSegment</a></div><div class="brief "><p class="paragraph">Generates a turn segment.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-171457371%2FFunctions%2F1602680372" anchor-label="pointToTime" id="-171457371%2FFunctions%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="point-to-time.html"><span>point</span><wbr><span>To</span><wbr><span><span>Time</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-171457371%2FFunctions%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="point-to-time.html"><span class="token function">pointToTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">trajectory<span class="token operator">: </span><a href="../-trajectory/index.html">Trajectory</a><span class="token punctuation">, </span></span><span class="parameter ">point<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-vector2d/index.html">Vector2d</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+<a data-name="-171457371%2FFunctions%2F1701142271" anchor-label="pointToTime" id="-171457371%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="point-to-time.html"><span>point</span><wbr><span>To</span><wbr><span><span>Time</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-171457371%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="point-to-time.html"><span class="token function">pointToTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">trajectory<span class="token operator">: </span><a href="../-trajectory/index.html">Trajectory</a><span class="token punctuation">, </span></span><span class="parameter ">point<span class="token operator">: </span><a href="../../com.amarcolini.joos.geometry/-vector2d/index.html">Vector2d</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
@@ -189,8 +212,9 @@ if(savedDarkMode === true){
       <div class="footer">
         <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Made by Alessandro Marcolini</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
+            </div>
+        </div>
     </div>
-</div>
-
-</body></html>
+</body>
+</html>
 

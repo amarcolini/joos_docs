@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-retypeapp@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.npmjs.org/retypeapp/-/retypeapp-3.1.0.tgz"
-  integrity sha512-8qRO299gucLgcE46yp0ZzFZ5GXuydg141ApbdJYGYQpZBK7V3WS/ENnU3uDvDxlCnKbNxTj+0gR8quAKjsrg6Q==
+retypeapp@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.npmjs.org/retypeapp/-/retypeapp-3.5.0.tgz"
+  integrity sha512-YhHilXfKLXU2BCZ0lfj4tUVMrk8nUjkSCAoV52xIPfRfSKQQah9D5vn2Eiu+FUmeGGEB9gykr8UVi7CvjmiqbQ==

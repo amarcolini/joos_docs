@@ -1,123 +1,266 @@
 <!doctype html>
-<html>
+<html class="no-js">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>com.amarcolini.joos.util</title>
-<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../styles/style.css" rel="Stylesheet">
-<link href="../../styles/jetbrains-mono.css" rel="Stylesheet">
 <link href="../../styles/main.css" rel="Stylesheet">
 <link href="../../styles/prism.css" rel="Stylesheet">
 <link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <script type="text/javascript" src="../../scripts/clipboard.js" async></script>
 <script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../scripts/main.js" defer></script>
-<script type="text/javascript" src="../../scripts/prism.js" async></script></head>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
-<div class="navigation-wrapper" id="navigation-wrapper">
-    <div id="leftToggler"><span class="icon-toggler"></span></div>
-    <div class="library-name">
-<a href="../../index.html">
-<span></span>            </a>    </div>
-    <div>0.4.8
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../index.html">
+                            
+                    </a>            </div>
+            <div class="library-version">0.4.9
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":navigation:dokkaHtmlPartial/commonMain">common</button>
+        </div>
     </div>
-    <div class="pull-right d-flex">
-        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
-        <div id="searchBar"></div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
-</div>
-<div id="container">
-    <div id="leftColumn">
-        <div id="sideMenu"></div>
-    </div>
-    <div id="main">
-<div class="main-content" id="content" pageids="Navigation::com.amarcolini.joos.util////PointingToDeclaration//1602680372">
-  <div class="breadcrumbs"><a href="../index.html">Navigation</a><span class="delimiter">/</span><a href="index.html">com.amarcolini.joos.util</a></div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageids="Navigation::com.amarcolini.joos.util////PointingToDeclaration//1701142271">
+  <div class="breadcrumbs"><a href="../index.html">Navigation</a><span class="delimiter">/</span><span class="current">com.amarcolini.joos.util</span></div>
   <div class="cover ">
-    <h1 class="cover"><span><span>Package</span></span> <span>com.</span><wbr><span>amarcolini.</span><wbr><span>joos.</span><wbr><span>util</span></h1>
-    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><p class="paragraph">Miscellaneous utilities</p></div></div>
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><p class="paragraph">Miscellaneous utilities</p></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button></div>
     <div class="tabs-section-body">
-      <h2 class="">Types</h2>
-      <div class="table" data-togglable="Types"><a data-name="792704751%2FClasslikes%2F1602680372" anchor-label="DoubleProgression" id="792704751%2FClasslikes%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-double-progression/index.html"><span>Double</span><wbr><span><span>Progression</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="792704751%2FClasslikes%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><span class="token keyword">class </span><a href="-double-progression/index.html">DoubleProgression</a><span class="token keyword"> implements </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html">Iterable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">A progression of values of type <code class="lang-kotlin">Double</code>.</p></div></div></div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="1704289441%2FClasslikes%2F1701142271" anchor-label="CircularGVF" id="1704289441%2FClasslikes%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-circular-g-v-f/index.html"><span>Circular</span><wbr><span><span>GVF</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1704289441%2FClasslikes%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><span class="token keyword">class </span><a href="-circular-g-v-f/index.html">CircularGVF</a><span class="token keyword"> implements </span><a href="-guiding-vector-field/index.html">GuidingVectorField</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-794553850%2FClasslikes%2F1602680372" anchor-label="DoubleProgressionKt" id="-794553850%2FClasslikes%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-double-progression-kt/index.html"><span>Double</span><wbr><span>Progression</span><wbr><span><span>Kt</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-794553850%2FClasslikes%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">class </span><a href="-double-progression-kt/index.html">DoubleProgressionKt</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+<a data-name="-2047103431%2FClasslikes%2F1701142271" anchor-label="CompositeGVF" id="-2047103431%2FClasslikes%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-composite-g-v-f/index.html"><span>Composite</span><wbr><span><span>GVF</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2047103431%2FClasslikes%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><span class="token keyword">class </span><a href="-composite-g-v-f/index.html">CompositeGVF</a><span class="token keyword"> implements </span><a href="-followable-g-v-f/index.html">FollowableGVF</a></div><div class="brief "><p class="paragraph">A composite guiding vector field that avoids <a href="-composite-g-v-f/index.html#1420602096%2FProperties%2F1701142271">obstacles</a> and follows <a href="-composite-g-v-f/index.html#2087962946%2FProperties%2F1701142271">pathGVF</a>.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-274896309%2FClasslikes%2F1602680372" anchor-label="GuidingVectorField" id="-274896309%2FClasslikes%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-guiding-vector-field/index.html"><span>Guiding</span><wbr><span>Vector</span><wbr><span><span>Field</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-274896309%2FClasslikes%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><span class="token keyword">class </span><a href="-guiding-vector-field/index.html">GuidingVectorField</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Guiding vector field for effective path following described in section III, eq. (9) of <a href="https://arxiv.org/pdf/1610.04391.pdf">1610.04391.pdf</a>. Implementation note: 2D parametric curves are used to describe paths instead of implicit curves of the form f(x,y) = 0 as described in the paper (which dramatically affects the cross track error calculation).</p></div></div></div>
+<a data-name="792704751%2FClasslikes%2F1701142271" anchor-label="DoubleProgression" id="792704751%2FClasslikes%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-double-progression/index.html"><span>Double</span><wbr><span><span>Progression</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="792704751%2FClasslikes%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><span class="token keyword">class </span><a href="-double-progression/index.html">DoubleProgression</a><span class="token keyword"> implements </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html">Iterable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">A progression of values of type <code class="lang-kotlin">Double</code>.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-1171481185%2FClasslikes%2F1602680372" anchor-label="MathUtil" id="-1171481185%2FClasslikes%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-math-util/index.html"><span>Math</span><wbr><span><span>Util</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1171481185%2FClasslikes%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">class </span><a href="-math-util/index.html">MathUtil</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+<a data-name="-794553850%2FClasslikes%2F1701142271" anchor-label="DoubleProgressionKt" id="-794553850%2FClasslikes%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-double-progression-kt/index.html"><span>Double</span><wbr><span>Progression</span><wbr><span><span>Kt</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-794553850%2FClasslikes%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">class </span><a href="-double-progression-kt/index.html">DoubleProgressionKt</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="1619777887%2FClasslikes%2F1602680372" anchor-label="NanoClock" id="1619777887%2FClasslikes%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-nano-clock/index.html"><span>Nano</span><wbr><span><span>Clock</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1619777887%2FClasslikes%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">class </span><a href="-nano-clock/index.html">NanoClock</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Clock interface with nanosecond precision and no guarantee about its origin (that is, this is only suited for measuring relative/elapsed time).</p></div></div></div>
+<a data-name="-2010363251%2FClasslikes%2F1701142271" anchor-label="FollowableGVF" id="-2010363251%2FClasslikes%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-followable-g-v-f/index.html"><span>Followable</span><wbr><span><span>GVF</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2010363251%2FClasslikes%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">interface </span><a href="-followable-g-v-f/index.html">FollowableGVF</a><span class="token keyword"> implements </span><a href="-guiding-vector-field/index.html">GuidingVectorField</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-274896309%2FClasslikes%2F1701142271" anchor-label="GuidingVectorField" id="-274896309%2FClasslikes%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-guiding-vector-field/index.html"><span>Guiding</span><wbr><span>Vector</span><wbr><span><span>Field</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-274896309%2FClasslikes%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">interface </span><a href="-guiding-vector-field/index.html">GuidingVectorField</a><span class="token keyword"> implements </span><a href="-vector-field/index.html">VectorField</a></div><div class="brief "><p class="paragraph">Guiding vector field for effective path following described in section III, eq. (9) of <a href="https://arxiv.org/pdf/1610.04391.pdf">1610.04391.pdf</a>. Implementation note: the function phi (see eq. (2)) and its properties are split up into Phi.target and Phi.tangent.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2137243245%2FClasslikes%2F1701142271" anchor-label="GVFObstacle" id="-2137243245%2FClasslikes%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-v-f-obstacle/index.html"><span><span>GVFObstacle</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2137243245%2FClasslikes%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><span class="token keyword">class </span><a href="-g-v-f-obstacle/index.html">GVFObstacle</a></div><div class="brief "><p class="paragraph">An obstacle vector field (\(\mathcal{X}_{\mathcal{R}_i}\) eq. 4) as described in <a href="https://arxiv.org/pdf/2205.12760.pdf">this paper</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1171481185%2FClasslikes%2F1701142271" anchor-label="MathUtil" id="-1171481185%2FClasslikes%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-math-util/index.html"><span>Math</span><wbr><span><span>Util</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1171481185%2FClasslikes%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">class </span><a href="-math-util/index.html">MathUtil</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2009502636%2FClasslikes%2F1701142271" anchor-label="Matrix3x3" id="2009502636%2FClasslikes%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-matrix3x3/index.html"><span><span>Matrix3x3</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2009502636%2FClasslikes%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><span class="token keyword">class </span><a href="-matrix3x3/index.html">Matrix3x3</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1619777887%2FClasslikes%2F1701142271" anchor-label="NanoClock" id="1619777887%2FClasslikes%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-nano-clock/index.html"><span>Nano</span><wbr><span><span>Clock</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1619777887%2FClasslikes%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">interface </span><a href="-nano-clock/index.html">NanoClock</a></div><div class="brief "><p class="paragraph">Clock interface with nanosecond precision and no guarantee about its origin (that is, this is only suited for measuring relative/elapsed time).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1379266855%2FClasslikes%2F1701142271" anchor-label="PathGVF" id="1379266855%2FClasslikes%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-path-g-v-f/index.html"><span>Path</span><wbr><span><span>GVF</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1379266855%2FClasslikes%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><span class="token keyword">class </span><a href="-path-g-v-f/index.html">PathGVF</a><span class="token keyword"> implements </span><a href="-guiding-vector-field/index.html">GuidingVectorField</a><span class="token punctuation">, </span><a href="-followable-g-v-f/index.html">FollowableGVF</a></div><div class="brief "><p class="paragraph">An implementation of <a href="-guiding-vector-field/index.html">GuidingVectorField</a> that follows the specified <a href="-path-g-v-f/index.html#1365578803%2FProperties%2F1701142271">path</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="951681648%2FClasslikes%2F1701142271" anchor-label="PositionPathGVF" id="951681648%2FClasslikes%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-position-path-g-v-f/index.html"><span>Position</span><wbr><span>Path</span><wbr><span><span>GVF</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="951681648%2FClasslikes%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><span class="token keyword">class </span><a href="-position-path-g-v-f/index.html">PositionPathGVF</a><span class="token keyword"> implements </span><a href="-guiding-vector-field/index.html">GuidingVectorField</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1419161154%2FClasslikes%2F1701142271" anchor-label="VectorField" id="1419161154%2FClasslikes%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-vector-field/index.html"><span>Vector</span><wbr><span><span>Field</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1419161154%2FClasslikes%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">interface </span><a href="-vector-field/index.html">VectorField</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
@@ -129,8 +272,9 @@ if(savedDarkMode === true){
       <div class="footer">
         <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Made by Alessandro Marcolini</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
+            </div>
+        </div>
     </div>
-</div>
-
-</body></html>
+</body>
+</html>
 

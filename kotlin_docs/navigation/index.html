@@ -1,253 +1,324 @@
 <!doctype html>
-<html>
+<html class="no-js">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>Navigation</title>
-<link href="../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+<link href="../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../scripts/sourceset_dependencies.js" async></script>
 <link href="../styles/style.css" rel="Stylesheet">
-<link href="../styles/jetbrains-mono.css" rel="Stylesheet">
 <link href="../styles/main.css" rel="Stylesheet">
 <link href="../styles/prism.css" rel="Stylesheet">
 <link href="../styles/logo-styles.css" rel="Stylesheet">
+<link href="../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <script type="text/javascript" src="../scripts/clipboard.js" async></script>
 <script type="text/javascript" src="../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../scripts/main.js" defer></script>
-<script type="text/javascript" src="../scripts/prism.js" async></script></head>
+<script type="text/javascript" src="../scripts/prism.js" async></script>
+<script type="text/javascript" src="../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
-<div class="navigation-wrapper" id="navigation-wrapper">
-    <div id="leftToggler"><span class="icon-toggler"></span></div>
-    <div class="library-name">
-<a href="../index.html">
-<span></span>            </a>    </div>
-    <div>0.4.8
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../index.html">
+                            
+                    </a>            </div>
+            <div class="library-version">0.4.9
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":navigation:dokkaHtmlPartial/commonMain">common</button>
+        </div>
     </div>
-    <div class="pull-right d-flex">
-        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
-        <div id="searchBar"></div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
-</div>
-<div id="container">
-    <div id="leftColumn">
-        <div id="sideMenu"></div>
-    </div>
-    <div id="main">
-<div class="main-content" id="content" pageids="Navigation::////PointingToDeclaration//1602680372">
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" id="content" pageids="Navigation::////PointingToDeclaration//1701142271">
   <div class="breadcrumbs"></div>
   <div class="cover ">
     <h1 class="cover"><span><span>Navigation</span></span></h1>
-    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><p class="paragraph">All of Joos' navigational functionality</p></div></div>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><p class="paragraph">All of Joos' navigational functionality</p></div></div>
   </div>
   <h2 class="">Packages</h2>
-  <div class="table"><a data-name="2124628634%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.control" id="2124628634%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
+  <div class="table"><a data-name="2124628634%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.control" id="2124628634%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="com.amarcolini.joos.control/index.html">com.amarcolini.joos.control</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2124628634%2FPackages%2F1602680372"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2124628634%2FPackages%2F1701142271"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right"></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
         </div>
-        <div><span class="brief-comment"><a data-name="2124628634%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.control" id="2124628634%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
+        <div><span class="brief-comment"><a data-name="2124628634%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.control" id="2124628634%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
             <p class="paragraph">Various control algorithms. Currently limited to DC motor feedforward and PID control</p>
           </span></div>
       </div>
     </div>
-<a data-name="2138723143%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.drive" id="2138723143%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
+<a data-name="2138723143%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.drive" id="2138723143%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="com.amarcolini.joos.drive/index.html">com.amarcolini.joos.drive</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2138723143%2FPackages%2F1602680372"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2138723143%2FPackages%2F1701142271"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right"></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
         </div>
-        <div><span class="brief-comment"><a data-name="2138723143%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.drive" id="2138723143%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
+        <div><span class="brief-comment"><a data-name="2138723143%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.drive" id="2138723143%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
             <p class="paragraph">Abstract definitions for various drivetrains</p>
           </span></div>
       </div>
     </div>
-<a data-name="-302772078%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.followers" id="-302772078%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
+<a data-name="-302772078%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.followers" id="-302772078%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="com.amarcolini.joos.followers/index.html">com.amarcolini.joos.followers</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-302772078%2FPackages%2F1602680372"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-302772078%2FPackages%2F1701142271"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right"></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
         </div>
-        <div><span class="brief-comment"><a data-name="-302772078%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.followers" id="-302772078%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
+        <div><span class="brief-comment"><a data-name="-302772078%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.followers" id="-302772078%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
             <p class="paragraph">An assortment of path and trajectory followers for various drivetrains</p>
           </span></div>
       </div>
     </div>
-<a data-name="-818316391%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.geometry" id="-818316391%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
+<a data-name="-818316391%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.geometry" id="-818316391%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="com.amarcolini.joos.geometry/index.html">com.amarcolini.joos.geometry</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-818316391%2FPackages%2F1602680372"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-818316391%2FPackages%2F1701142271"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right"></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
         </div>
-        <div><span class="brief-comment"><a data-name="-818316391%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.geometry" id="-818316391%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
+        <div><span class="brief-comment"><a data-name="-818316391%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.geometry" id="-818316391%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
             <p class="paragraph">Useful geometry classes</p>
           </span></div>
       </div>
     </div>
-<a data-name="434403317%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.kinematics" id="434403317%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
+<a data-name="434403317%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.kinematics" id="434403317%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="com.amarcolini.joos.kinematics/index.html">com.amarcolini.joos.kinematics</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="434403317%2FPackages%2F1602680372"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="434403317%2FPackages%2F1701142271"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right"></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
         </div>
-        <div><span class="brief-comment"><a data-name="434403317%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.kinematics" id="434403317%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
+        <div><span class="brief-comment"><a data-name="434403317%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.kinematics" id="434403317%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
             <p class="paragraph">Kinematics models for robot drivetrains</p>
           </span></div>
       </div>
     </div>
-<a data-name="383343744%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.localization" id="383343744%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
+<a data-name="383343744%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.localization" id="383343744%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="com.amarcolini.joos.localization/index.html">com.amarcolini.joos.localization</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="383343744%2FPackages%2F1602680372"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="383343744%2FPackages%2F1701142271"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right"></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
         </div>
-        <div><span class="brief-comment"><a data-name="383343744%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.localization" id="383343744%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
+        <div><span class="brief-comment"><a data-name="383343744%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.localization" id="383343744%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
             <p class="paragraph">Algorithms for robot localization</p>
           </span></div>
       </div>
     </div>
-<a data-name="1310455820%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.path" id="1310455820%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
+<a data-name="1310455820%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.path" id="1310455820%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="com.amarcolini.joos.path/index.html">com.amarcolini.joos.path</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1310455820%2FPackages%2F1602680372"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1310455820%2FPackages%2F1701142271"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right"></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
         </div>
-        <div><span class="brief-comment"><a data-name="1310455820%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.path" id="1310455820%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
+        <div><span class="brief-comment"><a data-name="1310455820%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.path" id="1310455820%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
             <p class="paragraph">Path definitions</p>
           </span></div>
       </div>
     </div>
-<a data-name="214207264%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.path.heading" id="214207264%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
+<a data-name="214207264%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.path.heading" id="214207264%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="com.amarcolini.joos.path.heading/index.html">com.amarcolini.joos.path.heading</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="214207264%2FPackages%2F1602680372"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="214207264%2FPackages%2F1701142271"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right"></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
         </div>
-        <div><span class="brief-comment"><a data-name="214207264%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.path.heading" id="214207264%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
+        <div><span class="brief-comment"><a data-name="214207264%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.path.heading" id="214207264%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
             <p class="paragraph">A collection of heading interpolators for paths</p>
           </span></div>
       </div>
     </div>
-<a data-name="-1356439578%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.profile" id="-1356439578%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
+<a data-name="-1356439578%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.profile" id="-1356439578%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="com.amarcolini.joos.profile/index.html">com.amarcolini.joos.profile</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1356439578%2FPackages%2F1602680372"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1356439578%2FPackages%2F1701142271"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right"></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
         </div>
-        <div><span class="brief-comment"><a data-name="-1356439578%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.profile" id="-1356439578%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
+        <div><span class="brief-comment"><a data-name="-1356439578%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.profile" id="-1356439578%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
             <p class="paragraph">Motion profile representation and generation</p>
           </span></div>
       </div>
     </div>
-<a data-name="2091558702%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.trajectory" id="2091558702%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
+<a data-name="-2015803603%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.serialization" id="-2015803603%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="com.amarcolini.joos.serialization/index.html">com.amarcolini.joos.serialization</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2015803603%2FPackages%2F1701142271"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="2091558702%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.trajectory" id="2091558702%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="com.amarcolini.joos.trajectory/index.html">com.amarcolini.joos.trajectory</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2091558702%2FPackages%2F1602680372"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2091558702%2FPackages%2F1701142271"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right"></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
         </div>
-        <div><span class="brief-comment"><a data-name="2091558702%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.trajectory" id="2091558702%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
+        <div><span class="brief-comment"><a data-name="2091558702%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.trajectory" id="2091558702%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
             <p class="paragraph">Trajectory definitions</p>
           </span></div>
       </div>
     </div>
-<a data-name="-2134902266%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.trajectory.config" id="-2134902266%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-      <div>
-        <div class="main-subrow ">
-          <div class=""><span class="inline-flex">
-              <div><a href="com.amarcolini.joos.trajectory.config/index.html">com.amarcolini.joos.trajectory.config</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2134902266%2FPackages%2F1602680372"></span>
-                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-              </span></span></div>
-          <div class="pull-right"></div>
-        </div>
-        <div><span class="brief-comment"><a data-name="-2134902266%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.trajectory.config" id="-2134902266%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-            <p class="paragraph">Trajectory serialization</p>
-          </span></div>
-      </div>
-    </div>
-<a data-name="540371062%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.trajectory.constraints" id="540371062%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
+<a data-name="540371062%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.trajectory.constraints" id="540371062%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="com.amarcolini.joos.trajectory.constraints/index.html">com.amarcolini.joos.trajectory.constraints</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="540371062%2FPackages%2F1602680372"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="540371062%2FPackages%2F1701142271"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right"></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
         </div>
-        <div><span class="brief-comment"><a data-name="540371062%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.trajectory.constraints" id="540371062%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
+        <div><span class="brief-comment"><a data-name="540371062%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.trajectory.constraints" id="540371062%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
             <p class="paragraph">Trajectory constraint definitions</p>
           </span></div>
       </div>
     </div>
-<a data-name="-290309719%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.util" id="-290309719%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
+<a data-name="-290309719%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.util" id="-290309719%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+    <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="com.amarcolini.joos.util/index.html">com.amarcolini.joos.util</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-290309719%2FPackages%2F1602680372"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-290309719%2FPackages%2F1701142271"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right"></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
         </div>
-        <div><span class="brief-comment"><a data-name="-290309719%2FPackages%2F1602680372" anchor-label="com.amarcolini.joos.util" id="-290309719%2FPackages%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
+        <div><span class="brief-comment"><a data-name="-290309719%2FPackages%2F1701142271" anchor-label="com.amarcolini.joos.util" id="-290309719%2FPackages%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
             <p class="paragraph">Miscellaneous utilities</p>
           </span></div>
       </div>
@@ -257,8 +328,9 @@ if(savedDarkMode === true){
       <div class="footer">
         <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Made by Alessandro Marcolini</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
+            </div>
+        </div>
     </div>
-</div>
-
-</body></html>
+</body>
+</html>
 
