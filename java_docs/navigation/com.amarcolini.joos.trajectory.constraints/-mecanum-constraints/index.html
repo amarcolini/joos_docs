@@ -1,517 +1,334 @@
 <!doctype html>
-<html>
+<html class="no-js">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>MecanumConstraints</title>
-<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../../styles/style.css" rel="Stylesheet">
-<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
 <link href="../../../styles/main.css" rel="Stylesheet">
 <link href="../../../styles/prism.css" rel="Stylesheet">
 <link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
 <script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
-<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
-<div class="navigation-wrapper" id="navigation-wrapper">
-    <div id="leftToggler"><span class="icon-toggler"></span></div>
-    <div class="library-name">
-<a href="../../../index.html">
-<span></span>            </a>    </div>
-    <div>0.4.8
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            
+                    </a>            </div>
+            <div class="library-version">0.4.9
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":navigation:dokkaHtmlPartial/commonMain">common</button>
+        </div>
     </div>
-    <div class="pull-right d-flex">
-        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
-        <div id="searchBar"></div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
-</div>
-<div id="container">
-    <div id="leftColumn">
-        <div id="sideMenu"></div>
-    </div>
-    <div id="main">
-<div class="main-content" id="content" pageids="Navigation::com.amarcolini.joos.trajectory.constraints/MecanumConstraints///PointingToDeclaration//1602680372">
-  <div class="breadcrumbs"><a href="../../index.html">Navigation</a><span class="delimiter">/</span><a href="../index.html">com.amarcolini.joos.trajectory.constraints</a><span class="delimiter">/</span><a href="index.html">MecanumConstraints</a></div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="Navigation::com.amarcolini.joos.trajectory.constraints/MecanumConstraints///PointingToDeclaration//1701142271">
+  <div class="breadcrumbs"><a href="../../index.html">Navigation</a><span class="delimiter">/</span><a href="../index.html">com.amarcolini.joos.trajectory.constraints</a><span class="delimiter">/</span><span class="current">MecanumConstraints</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Mecanum</span><wbr><span><span>Constraints</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><span class="token keyword">class </span><a href="index.html">MecanumConstraints</a><span class="token keyword"> implements </span><a href="../-trajectory-constraints/index.html">TrajectoryConstraints</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><span class="token keyword">class </span><a href="index.html">MecanumConstraints</a><span class="token keyword"> implements </span><a href="../-trajectory-constraints/index.html">TrajectoryConstraints</a></div></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
     <div class="tabs-section-body">
-      <h2 class="tabbedcontent">Constructors</h2>
-      <div class="table" data-togglable="Constructors"><a data-name="945076628%2FConstructors%2F1602680372" anchor-label="MecanumConstraints" id="945076628%2FConstructors%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-mecanum-constraints.html"><span>Mecanum</span><wbr><span><span>Constraints</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="945076628%2FConstructors%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">MecanumConstraints</a>&nbsp;<a href="-mecanum-constraints.html"><span class="token function">MecanumConstraints</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;wheelBase<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;lateralMultiplier<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxVel<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxAccel<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;maxAngVel<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;maxAngAccel<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;maxAngJerk</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="945076628%2FConstructors%2F1602680372" anchor-label="MecanumConstraints" id="945076628%2FConstructors%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-mecanum-constraints.html"><span>Mecanum</span><wbr><span><span>Constraints</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="945076628%2FConstructors%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">MecanumConstraints</a>&nbsp;<a href="-mecanum-constraints.html"><span class="token function">MecanumConstraints</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;wheelBase<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;lateralMultiplier<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxVel<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxAccel<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;maxAngVel<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;maxAngAccel</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="945076628%2FConstructors%2F1602680372" anchor-label="MecanumConstraints" id="945076628%2FConstructors%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-mecanum-constraints.html"><span>Mecanum</span><wbr><span><span>Constraints</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="945076628%2FConstructors%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">MecanumConstraints</a>&nbsp;<a href="-mecanum-constraints.html"><span class="token function">MecanumConstraints</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;wheelBase<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;lateralMultiplier<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxVel<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxAccel<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;maxAngVel</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="945076628%2FConstructors%2F1602680372" anchor-label="MecanumConstraints" id="945076628%2FConstructors%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-mecanum-constraints.html"><span>Mecanum</span><wbr><span><span>Constraints</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="945076628%2FConstructors%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">MecanumConstraints</a>&nbsp;<a href="-mecanum-constraints.html"><span class="token function">MecanumConstraints</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;wheelBase<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;lateralMultiplier<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxVel<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxAccel</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="945076628%2FConstructors%2F1602680372" anchor-label="MecanumConstraints" id="945076628%2FConstructors%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-mecanum-constraints.html"><span>Mecanum</span><wbr><span><span>Constraints</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="945076628%2FConstructors%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">MecanumConstraints</a>&nbsp;<a href="-mecanum-constraints.html"><span class="token function">MecanumConstraints</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;wheelBase<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;lateralMultiplier<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxVel</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="945076628%2FConstructors%2F1602680372" anchor-label="MecanumConstraints" id="945076628%2FConstructors%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-mecanum-constraints.html"><span>Mecanum</span><wbr><span><span>Constraints</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="945076628%2FConstructors%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">MecanumConstraints</a>&nbsp;<a href="-mecanum-constraints.html"><span class="token function">MecanumConstraints</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;wheelBase<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;lateralMultiplier</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="945076628%2FConstructors%2F1602680372" anchor-label="MecanumConstraints" id="945076628%2FConstructors%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-mecanum-constraints.html"><span>Mecanum</span><wbr><span><span>Constraints</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="945076628%2FConstructors%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">MecanumConstraints</a>&nbsp;<a href="-mecanum-constraints.html"><span class="token function">MecanumConstraints</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;wheelBase</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="945076628%2FConstructors%2F1602680372" anchor-label="MecanumConstraints" id="945076628%2FConstructors%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-mecanum-constraints.html"><span>Mecanum</span><wbr><span><span>Constraints</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="945076628%2FConstructors%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">MecanumConstraints</a>&nbsp;<a href="-mecanum-constraints.html"><span class="token function">MecanumConstraints</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="945076628%2FConstructors%2F1602680372" anchor-label="MecanumConstraints" id="945076628%2FConstructors%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-mecanum-constraints.html"><span>Mecanum</span><wbr><span><span>Constraints</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="945076628%2FConstructors%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">MecanumConstraints</a>&nbsp;<a href="-mecanum-constraints.html"><span class="token function">MecanumConstraints</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="1682118735%2FConstructors%2F1602680372" anchor-label="MecanumConstraints" id="1682118735%2FConstructors%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-mecanum-constraints.html"><span>Mecanum</span><wbr><span><span>Constraints</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1682118735%2FConstructors%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">MecanumConstraints</a>&nbsp;<a href="-mecanum-constraints.html"><span class="token function">MecanumConstraints</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxWheelVel<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;wheelBase<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;lateralMultiplier<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxVel<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxAccel<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;maxAngVel<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;maxAngAccel<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;maxAngJerk</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="1682118735%2FConstructors%2F1602680372" anchor-label="MecanumConstraints" id="1682118735%2FConstructors%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-mecanum-constraints.html"><span>Mecanum</span><wbr><span><span>Constraints</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1682118735%2FConstructors%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">MecanumConstraints</a>&nbsp;<a href="-mecanum-constraints.html"><span class="token function">MecanumConstraints</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxWheelVel<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;wheelBase<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;lateralMultiplier<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxVel<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxAccel<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;maxAngVel<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;maxAngAccel</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="1682118735%2FConstructors%2F1602680372" anchor-label="MecanumConstraints" id="1682118735%2FConstructors%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-mecanum-constraints.html"><span>Mecanum</span><wbr><span><span>Constraints</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1682118735%2FConstructors%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">MecanumConstraints</a>&nbsp;<a href="-mecanum-constraints.html"><span class="token function">MecanumConstraints</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxWheelVel<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;wheelBase<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;lateralMultiplier<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxVel<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxAccel<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;maxAngVel</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="1682118735%2FConstructors%2F1602680372" anchor-label="MecanumConstraints" id="1682118735%2FConstructors%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-mecanum-constraints.html"><span>Mecanum</span><wbr><span><span>Constraints</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1682118735%2FConstructors%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">MecanumConstraints</a>&nbsp;<a href="-mecanum-constraints.html"><span class="token function">MecanumConstraints</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxWheelVel<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;wheelBase<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;lateralMultiplier<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxVel<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxAccel</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="1682118735%2FConstructors%2F1701142271" anchor-label="MecanumConstraints" id="1682118735%2FConstructors%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mecanum-constraints.html"><span>Mecanum</span><wbr><span><span>Constraints</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1682118735%2FConstructors%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">MecanumConstraints</a>&nbsp;<a href="-mecanum-constraints.html"><span class="token function">MecanumConstraints</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxWheelVel<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;wheelBase<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;lateralMultiplier<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxVel<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxAccel<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;maxAngVel<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;maxAngAccel<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;maxAngJerk</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">MecanumConstraints</a>&nbsp;<a href="-mecanum-constraints.html"><span class="token function">MecanumConstraints</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxWheelVel<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;wheelBase<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;lateralMultiplier<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxVel<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxAccel<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;maxAngVel<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;maxAngAccel</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">MecanumConstraints</a>&nbsp;<a href="-mecanum-constraints.html"><span class="token function">MecanumConstraints</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxWheelVel<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;wheelBase<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;lateralMultiplier<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxVel<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxAccel<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;maxAngVel</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">MecanumConstraints</a>&nbsp;<a href="-mecanum-constraints.html"><span class="token function">MecanumConstraints</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxWheelVel<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;wheelBase<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;lateralMultiplier<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxVel<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxAccel</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">MecanumConstraints</a>&nbsp;<a href="-mecanum-constraints.html"><span class="token function">MecanumConstraints</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxWheelVel<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;wheelBase<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;lateralMultiplier<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxVel</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">MecanumConstraints</a>&nbsp;<a href="-mecanum-constraints.html"><span class="token function">MecanumConstraints</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;maxWheelVel<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;trackWidth<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;wheelBase<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;lateralMultiplier</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Functions</h2>
-      <div class="table" data-togglable="Functions"><a data-name="-1648704352%2FFunctions%2F1602680372" anchor-label="getAccelConstraint" id="-1648704352%2FFunctions%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="get-accel-constraint.html"><span>get</span><wbr><span>Accel</span><wbr><span><span>Constraint</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1648704352%2FFunctions%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="../-min-acceleration-constraint/index.html">MinAccelerationConstraint</a>&nbsp;<a href="get-accel-constraint.html"><span class="token function">getAccelConstraint</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-880575738%2FProperties%2F1701142271" anchor-label="accelConstraint" id="-880575738%2FProperties%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-880575738%2FProperties%2F1701142271"><span>accel</span><wbr><span><span>Constraint</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-880575738%2FProperties%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword">final </span><span class="token keyword">transient </span><a href="../-min-acceleration-constraint/index.html">MinAccelerationConstraint</a>&nbsp;<a href="index.html#-880575738%2FProperties%2F1701142271">accelConstraint</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-347347597%2FFunctions%2F1602680372" anchor-label="getMaxAngAccel" id="-347347597%2FFunctions%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="get-max-ang-accel.html"><span>get</span><wbr><span>Max</span><wbr><span>Ang</span><wbr><span><span>Accel</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-347347597%2FFunctions%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;<a href="get-max-ang-accel.html"><span class="token function">getMaxAngAccel</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+<a data-name="334852851%2FProperties%2F1701142271" anchor-label="lateralMultiplier" id="334852851%2FProperties%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#334852851%2FProperties%2F1701142271"><span>lateral</span><wbr><span><span>Multiplier</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="334852851%2FProperties%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#334852851%2FProperties%2F1701142271">lateralMultiplier</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-1467884501%2FFunctions%2F1602680372" anchor-label="getMaxAngJerk" id="-1467884501%2FFunctions%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="get-max-ang-jerk.html"><span>get</span><wbr><span>Max</span><wbr><span>Ang</span><wbr><span><span>Jerk</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1467884501%2FFunctions%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;<a href="get-max-ang-jerk.html"><span class="token function">getMaxAngJerk</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+<a data-name="1222789515%2FProperties%2F1701142271" anchor-label="maxAccel" id="1222789515%2FProperties%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1222789515%2FProperties%2F1701142271"><span>max</span><wbr><span><span>Accel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1222789515%2FProperties%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#1222789515%2FProperties%2F1701142271">maxAccel</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-1670259746%2FFunctions%2F1602680372" anchor-label="getMaxAngVel" id="-1670259746%2FFunctions%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="get-max-ang-vel.html"><span>get</span><wbr><span>Max</span><wbr><span>Ang</span><wbr><span><span>Vel</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1670259746%2FFunctions%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;<a href="get-max-ang-vel.html"><span class="token function">getMaxAngVel</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+<a data-name="420200153%2FProperties%2F1701142271" anchor-label="maxAngAccel" id="420200153%2FProperties%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#420200153%2FProperties%2F1701142271"><span>max</span><wbr><span>Ang</span><wbr><span><span>Accel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="420200153%2FProperties%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword">final </span><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;<a href="index.html#420200153%2FProperties%2F1701142271">maxAngAccel</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-1433733989%2FFunctions%2F1602680372" anchor-label="getType" id="-1433733989%2FFunctions%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="get-type.html"><span>get</span><wbr><span><span>Type</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1433733989%2FFunctions%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="../-trajectory-constraints/-drive-type/index.html">TrajectoryConstraints.DriveType</a>&nbsp;<a href="get-type.html"><span class="token function">getType</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+<a data-name="-196198907%2FProperties%2F1701142271" anchor-label="maxAngJerk" id="-196198907%2FProperties%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-196198907%2FProperties%2F1701142271"><span>max</span><wbr><span>Ang</span><wbr><span><span>Jerk</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-196198907%2FProperties%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword">final </span><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;<a href="index.html#-196198907%2FProperties%2F1701142271">maxAngJerk</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="690351051%2FFunctions%2F1602680372" anchor-label="getVelConstraint" id="690351051%2FFunctions%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="get-vel-constraint.html"><span>get</span><wbr><span>Vel</span><wbr><span><span>Constraint</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="690351051%2FFunctions%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="../-min-velocity-constraint/index.html">MinVelocityConstraint</a>&nbsp;<a href="get-vel-constraint.html"><span class="token function">getVelConstraint</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+<a data-name="587519684%2FProperties%2F1701142271" anchor-label="maxAngVel" id="587519684%2FProperties%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#587519684%2FProperties%2F1701142271"><span>max</span><wbr><span>Ang</span><wbr><span><span>Vel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="587519684%2FProperties%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword">final </span><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;<a href="index.html#587519684%2FProperties%2F1701142271">maxAngVel</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1677564426%2FProperties%2F1701142271" anchor-label="maxVel" id="-1677564426%2FProperties%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1677564426%2FProperties%2F1701142271"><span>max</span><wbr><span><span>Vel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1677564426%2FProperties%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#-1677564426%2FProperties%2F1701142271">maxVel</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-534994363%2FProperties%2F1701142271" anchor-label="maxWheelVel" id="-534994363%2FProperties%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-534994363%2FProperties%2F1701142271"><span>max</span><wbr><span>Wheel</span><wbr><span><span>Vel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-534994363%2FProperties%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#-534994363%2FProperties%2F1701142271">maxWheelVel</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-825568364%2FProperties%2F1701142271" anchor-label="trackWidth" id="-825568364%2FProperties%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-825568364%2FProperties%2F1701142271"><span>track</span><wbr><span><span>Width</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-825568364%2FProperties%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#-825568364%2FProperties%2F1701142271">trackWidth</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-430636111%2FProperties%2F1701142271" anchor-label="velConstraint" id="-430636111%2FProperties%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-430636111%2FProperties%2F1701142271"><span>vel</span><wbr><span><span>Constraint</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-430636111%2FProperties%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword">final </span><span class="token keyword">transient </span><a href="../-min-velocity-constraint/index.html">MinVelocityConstraint</a>&nbsp;<a href="index.html#-430636111%2FProperties%2F1701142271">velConstraint</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1088661375%2FProperties%2F1701142271" anchor-label="wheelBase" id="1088661375%2FProperties%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1088661375%2FProperties%2F1701142271"><span>wheel</span><wbr><span><span>Base</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1088661375%2FProperties%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#1088661375%2FProperties%2F1701142271">wheelBase</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Properties</h2>
-      <div class="table" data-togglable="Properties"><a data-name="-880575738%2FProperties%2F1602680372" anchor-label="accelConstraint" id="-880575738%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="index.html#-880575738%2FProperties%2F1602680372"><span>accel</span><wbr><span><span>Constraint</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-880575738%2FProperties%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><a data-name="-880575738%2FProperties%2F1602680372" anchor-label="accelConstraint" id="-880575738%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword">final </span><span class="token keyword"></span><a href="../-min-acceleration-constraint/index.html">MinAccelerationConstraint</a>&nbsp;<a href="index.html#-880575738%2FProperties%2F1602680372">accelConstraint</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1648704352%2FFunctions%2F1701142271" anchor-label="getAccelConstraint" id="-1648704352%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-accel-constraint.html"><span>get</span><wbr><span>Accel</span><wbr><span><span>Constraint</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1648704352%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="../-min-acceleration-constraint/index.html">MinAccelerationConstraint</a>&nbsp;<a href="get-accel-constraint.html"><span class="token function">getAccelConstraint</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="334852851%2FProperties%2F1602680372" anchor-label="lateralMultiplier" id="334852851%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="index.html#334852851%2FProperties%2F1602680372"><span>lateral</span><wbr><span><span>Multiplier</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="334852851%2FProperties%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><a data-name="334852851%2FProperties%2F1602680372" anchor-label="lateralMultiplier" id="334852851%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation">JvmField</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#334852851%2FProperties%2F1602680372">lateralMultiplier</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+<a data-name="-347347597%2FFunctions%2F1701142271" anchor-label="getMaxAngAccel" id="-347347597%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-max-ang-accel.html"><span>get</span><wbr><span>Max</span><wbr><span>Ang</span><wbr><span><span>Accel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-347347597%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;<a href="get-max-ang-accel.html"><span class="token function">getMaxAngAccel</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="1222789515%2FProperties%2F1602680372" anchor-label="maxAccel" id="1222789515%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="index.html#1222789515%2FProperties%2F1602680372"><span>max</span><wbr><span><span>Accel</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1222789515%2FProperties%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><a data-name="1222789515%2FProperties%2F1602680372" anchor-label="maxAccel" id="1222789515%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation">JvmField</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#1222789515%2FProperties%2F1602680372">maxAccel</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+<a data-name="-1467884501%2FFunctions%2F1701142271" anchor-label="getMaxAngJerk" id="-1467884501%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-max-ang-jerk.html"><span>get</span><wbr><span>Max</span><wbr><span>Ang</span><wbr><span><span>Jerk</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1467884501%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;<a href="get-max-ang-jerk.html"><span class="token function">getMaxAngJerk</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="420200153%2FProperties%2F1602680372" anchor-label="maxAngAccel" id="420200153%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="index.html#420200153%2FProperties%2F1602680372"><span>max</span><wbr><span>Ang</span><wbr><span><span>Accel</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="420200153%2FProperties%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><a data-name="420200153%2FProperties%2F1602680372" anchor-label="maxAngAccel" id="420200153%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword">final </span><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;<a href="index.html#420200153%2FProperties%2F1602680372">maxAngAccel</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+<a data-name="-1670259746%2FFunctions%2F1701142271" anchor-label="getMaxAngVel" id="-1670259746%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-max-ang-vel.html"><span>get</span><wbr><span>Max</span><wbr><span>Ang</span><wbr><span><span>Vel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1670259746%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;<a href="get-max-ang-vel.html"><span class="token function">getMaxAngVel</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="-196198907%2FProperties%2F1602680372" anchor-label="maxAngJerk" id="-196198907%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="index.html#-196198907%2FProperties%2F1602680372"><span>max</span><wbr><span>Ang</span><wbr><span><span>Jerk</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-196198907%2FProperties%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><a data-name="-196198907%2FProperties%2F1602680372" anchor-label="maxAngJerk" id="-196198907%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword">final </span><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;<a href="index.html#-196198907%2FProperties%2F1602680372">maxAngJerk</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="587519684%2FProperties%2F1602680372" anchor-label="maxAngVel" id="587519684%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="index.html#587519684%2FProperties%2F1602680372"><span>max</span><wbr><span>Ang</span><wbr><span><span>Vel</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="587519684%2FProperties%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><a data-name="587519684%2FProperties%2F1602680372" anchor-label="maxAngVel" id="587519684%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword">final </span><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;<a href="index.html#587519684%2FProperties%2F1602680372">maxAngVel</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-1677564426%2FProperties%2F1602680372" anchor-label="maxVel" id="-1677564426%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="index.html#-1677564426%2FProperties%2F1602680372"><span>max</span><wbr><span><span>Vel</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1677564426%2FProperties%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><a data-name="-1677564426%2FProperties%2F1602680372" anchor-label="maxVel" id="-1677564426%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation">JvmField</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#-1677564426%2FProperties%2F1602680372">maxVel</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-534994363%2FProperties%2F1602680372" anchor-label="maxWheelVel" id="-534994363%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="index.html#-534994363%2FProperties%2F1602680372"><span>max</span><wbr><span>Wheel</span><wbr><span><span>Vel</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-534994363%2FProperties%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><a data-name="-534994363%2FProperties%2F1602680372" anchor-label="maxWheelVel" id="-534994363%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation">JvmField</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#-534994363%2FProperties%2F1602680372">maxWheelVel</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-825568364%2FProperties%2F1602680372" anchor-label="trackWidth" id="-825568364%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="index.html#-825568364%2FProperties%2F1602680372"><span>track</span><wbr><span><span>Width</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-825568364%2FProperties%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><a data-name="-825568364%2FProperties%2F1602680372" anchor-label="trackWidth" id="-825568364%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation">JvmField</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#-825568364%2FProperties%2F1602680372">trackWidth</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="1481916917%2FProperties%2F1602680372" anchor-label="type" id="1481916917%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="index.html#1481916917%2FProperties%2F1602680372"><span><span>type</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1481916917%2FProperties%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><a data-name="1481916917%2FProperties%2F1602680372" anchor-label="type" id="1481916917%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword">final </span><span class="token keyword"></span><a href="../-trajectory-constraints/-drive-type/index.html">TrajectoryConstraints.DriveType</a>&nbsp;<a href="index.html#1481916917%2FProperties%2F1602680372">type</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-430636111%2FProperties%2F1602680372" anchor-label="velConstraint" id="-430636111%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="index.html#-430636111%2FProperties%2F1602680372"><span>vel</span><wbr><span><span>Constraint</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-430636111%2FProperties%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><a data-name="-430636111%2FProperties%2F1602680372" anchor-label="velConstraint" id="-430636111%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword">final </span><span class="token keyword"></span><a href="../-min-velocity-constraint/index.html">MinVelocityConstraint</a>&nbsp;<a href="index.html#-430636111%2FProperties%2F1602680372">velConstraint</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="1088661375%2FProperties%2F1602680372" anchor-label="wheelBase" id="1088661375%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/main" data-filterable-set=":navigation:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="index.html#1088661375%2FProperties%2F1602680372"><span>wheel</span><wbr><span><span>Base</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1088661375%2FProperties%2F1602680372"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/main"><a data-name="1088661375%2FProperties%2F1602680372" anchor-label="wheelBase" id="1088661375%2FProperties%2F1602680372" data-filterable-set=":navigation:dokkaHtmlPartial/main"></a><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation">JvmField</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#1088661375%2FProperties%2F1602680372">wheelBase</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+<a data-name="690351051%2FFunctions%2F1701142271" anchor-label="getVelConstraint" id="690351051%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-vel-constraint.html"><span>get</span><wbr><span>Vel</span><wbr><span><span>Constraint</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="690351051%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="../-min-velocity-constraint/index.html">MinVelocityConstraint</a>&nbsp;<a href="get-vel-constraint.html"><span class="token function">getVelConstraint</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
@@ -523,8 +340,9 @@ if(savedDarkMode === true){
       <div class="footer">
         <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Made by Alessandro Marcolini</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
+            </div>
+        </div>
     </div>
-</div>
-
-</body></html>
+</body>
+</html>
 

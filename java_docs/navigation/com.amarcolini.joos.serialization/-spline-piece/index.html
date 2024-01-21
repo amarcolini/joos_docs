@@ -1,0 +1,333 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>SplinePiece</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            
+                    </a>            </div>
+            <div class="library-version">0.4.9
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":navigation:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="Navigation::com.amarcolini.joos.serialization/SplinePiece///PointingToDeclaration//1701142271">
+  <div class="breadcrumbs"><a href="../../index.html">Navigation</a><span class="delimiter">/</span><a href="../index.html">com.amarcolini.joos.serialization</a><span class="delimiter">/</span><span class="current">SplinePiece</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Spline</span><wbr><span><span>Piece</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><span class="token keyword">class </span><a href="index.html">SplinePiece</a><span class="token keyword"> implements </span><a href="../-trajectory-piece/index.html">TrajectoryPiece</a><span class="token punctuation">, </span><a href="../-movable-trajectory-piece/index.html">MovableTrajectoryPiece</a></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-1716048386%2FConstructors%2F1701142271" anchor-label="SplinePiece" id="-1716048386%2FConstructors%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-spline-piece.html"><span>Spline</span><wbr><span><span>Piece</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1716048386%2FConstructors%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">SplinePiece</a>&nbsp;<a href="-spline-piece.html"><span class="token function">SplinePiece</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-vector2d/index.html">Vector2d</a>&nbsp;end<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;tangent<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;startTangentMag<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;endTangentMag<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../../com.amarcolini.joos.path.heading/-heading-interpolation/index.html">HeadingInterpolation</a>&nbsp;heading</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">SplinePiece</a>&nbsp;<a href="-spline-piece.html"><span class="token function">SplinePiece</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-vector2d/index.html">Vector2d</a>&nbsp;end<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;tangent<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;startTangentMag<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;endTangentMag</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">SplinePiece</a>&nbsp;<a href="-spline-piece.html"><span class="token function">SplinePiece</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-vector2d/index.html">Vector2d</a>&nbsp;end<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;tangent<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;startTangentMag</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">SplinePiece</a>&nbsp;<a href="-spline-piece.html"><span class="token function">SplinePiece</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-vector2d/index.html">Vector2d</a>&nbsp;end<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;tangent</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="280255000%2FProperties%2F1701142271" anchor-label="end" id="280255000%2FProperties%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#280255000%2FProperties%2F1701142271"><span><span>end</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="280255000%2FProperties%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-vector2d/index.html">Vector2d</a>&nbsp;<a href="index.html#280255000%2FProperties%2F1701142271">end</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1617139926%2FProperties%2F1701142271" anchor-label="endTangentMag" id="-1617139926%2FProperties%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1617139926%2FProperties%2F1701142271"><span>end</span><wbr><span>Tangent</span><wbr><span><span>Mag</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1617139926%2FProperties%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#-1617139926%2FProperties%2F1701142271">endTangentMag</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1862161361%2FProperties%2F1701142271" anchor-label="heading" id="1862161361%2FProperties%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1862161361%2FProperties%2F1701142271"><span><span>heading</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1862161361%2FProperties%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword"></span><a href="../../com.amarcolini.joos.path.heading/-heading-interpolation/index.html">HeadingInterpolation</a>&nbsp;<a href="index.html#1862161361%2FProperties%2F1701142271">heading</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1182894275%2FProperties%2F1701142271" anchor-label="startTangentMag" id="1182894275%2FProperties%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1182894275%2FProperties%2F1701142271"><span>start</span><wbr><span>Tangent</span><wbr><span><span>Mag</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1182894275%2FProperties%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#1182894275%2FProperties%2F1701142271">startTangentMag</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1461170414%2FProperties%2F1701142271" anchor-label="tangent" id="1461170414%2FProperties%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1461170414%2FProperties%2F1701142271"><span><span>tangent</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1461170414%2FProperties%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;<a href="index.html#1461170414%2FProperties%2F1701142271">tangent</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1127154466%2FFunctions%2F1701142271" anchor-label="getEnd" id="1127154466%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-end.html"><span>get</span><wbr><span><span>End</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1127154466%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-vector2d/index.html">Vector2d</a>&nbsp;<a href="get-end.html"><span class="token function">getEnd</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1283902388%2FFunctions%2F1701142271" anchor-label="getEndTangentMag" id="1283902388%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-end-tangent-mag.html"><span>get</span><wbr><span>End</span><wbr><span>Tangent</span><wbr><span><span>Mag</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1283902388%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;<a href="get-end-tangent-mag.html"><span class="token function">getEndTangentMag</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="579430363%2FFunctions%2F1701142271" anchor-label="getHeading" id="579430363%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-heading.html"><span>get</span><wbr><span><span>Heading</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="579430363%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="../../com.amarcolini.joos.path.heading/-heading-interpolation/index.html">HeadingInterpolation</a>&nbsp;<a href="get-heading.html"><span class="token function">getHeading</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1650782925%2FFunctions%2F1701142271" anchor-label="getStartTangentMag" id="1650782925%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-start-tangent-mag.html"><span>get</span><wbr><span>Start</span><wbr><span>Tangent</span><wbr><span><span>Mag</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1650782925%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;<a href="get-start-tangent-mag.html"><span class="token function">getStartTangentMag</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="178439416%2FFunctions%2F1701142271" anchor-label="getTangent" id="178439416%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-tangent.html"><span>get</span><wbr><span><span>Tangent</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="178439416%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;<a href="get-tangent.html"><span class="token function">getTangent</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1846874344%2FFunctions%2F1701142271" anchor-label="setEnd" id="1846874344%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-end.html"><span>set</span><wbr><span><span>End</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1846874344%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="set-end.html"><span class="token function">setEnd</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-vector2d/index.html">Vector2d</a>&nbsp;end</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1152547452%2FFunctions%2F1701142271" anchor-label="setEndTangentMag" id="-1152547452%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-end-tangent-mag.html"><span>set</span><wbr><span>End</span><wbr><span>Tangent</span><wbr><span><span>Mag</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1152547452%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="set-end-tangent-mag.html"><span class="token function">setEndTangentMag</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;endTangentMag</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-61283927%2FFunctions%2F1701142271" anchor-label="setHeading" id="-61283927%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-heading.html"><span>set</span><wbr><span><span>Heading</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-61283927%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="set-heading.html"><span class="token function">setHeading</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../../com.amarcolini.joos.path.heading/-heading-interpolation/index.html">HeadingInterpolation</a>&nbsp;heading</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1272013323%2FFunctions%2F1701142271" anchor-label="setStartTangentMag" id="1272013323%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-start-tangent-mag.html"><span>set</span><wbr><span>Start</span><wbr><span>Tangent</span><wbr><span><span>Mag</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1272013323%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="set-start-tangent-mag.html"><span class="token function">setStartTangentMag</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html">Double</a>&nbsp;startTangentMag</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1919942728%2FFunctions%2F1701142271" anchor-label="setTangent" id="1919942728%2FFunctions%2F1701142271" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":navigation:dokkaHtmlPartial/commonMain" data-filterable-set=":navigation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-tangent.html"><span>set</span><wbr><span><span>Tangent</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1919942728%2FFunctions%2F1701142271"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":navigation:dokkaHtmlPartial/commonMain"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="set-tangent.html"><span class="token function">setTangent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../../com.amarcolini.joos.geometry/-angle/index.html">Angle</a>&nbsp;tangent</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Made by Alessandro Marcolini</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

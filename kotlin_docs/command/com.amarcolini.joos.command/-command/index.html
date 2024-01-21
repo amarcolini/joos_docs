@@ -1,622 +1,550 @@
 <!doctype html>
-<html>
+<html class="no-js">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>Command</title>
-<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../../styles/style.css" rel="Stylesheet">
-<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
 <link href="../../../styles/main.css" rel="Stylesheet">
 <link href="../../../styles/prism.css" rel="Stylesheet">
 <link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
 <script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
-<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
-<div class="navigation-wrapper" id="navigation-wrapper">
-    <div id="leftToggler"><span class="icon-toggler"></span></div>
-    <div class="library-name">
-<a href="../../../index.html">
-<span></span>            </a>    </div>
-    <div>0.4.8
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            
+                    </a>            </div>
+            <div class="library-version">0.4.9
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":command:dokkaHtmlPartial/main">androidJvm</button>
+        </div>
     </div>
-    <div class="pull-right d-flex">
-        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
-        <div id="searchBar"></div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
-</div>
-<div id="container">
-    <div id="leftColumn">
-        <div id="sideMenu"></div>
-    </div>
-    <div id="main">
-<div class="main-content" id="content" pageids="Command::com.amarcolini.joos.command/Command///PointingToDeclaration//-1658673126">
-  <div class="breadcrumbs"><a href="../../index.html">Command</a><span class="delimiter">/</span><a href="../index.html">com.amarcolini.joos.command</a><span class="delimiter">/</span><a href="index.html">Command</a></div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="Command::com.amarcolini.joos.command/Command///PointingToDeclaration//-1658673126">
+  <div class="breadcrumbs"><a href="../../index.html">Command</a><span class="delimiter">/</span><a href="../index.html">com.amarcolini.joos.command</a><span class="delimiter">/</span><span class="current">Command</span></div>
   <div class="cover ">
     <h1 class="cover"><span><span>Command</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">Command</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">A state machine representing a complete action to be performed using any number of <a href="../-component/index.html">Component</a>s. Commands are usually run from the <a href="../-command-scheduler/index.html">CommandScheduler</a>, but can be run independently if desired. Commands can be chained together to form complex multi-step actions.</p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">Command</a></div><p class="paragraph">A state machine representing a complete action to be performed using any number of <a href="../-component/index.html">Component</a>s. Commands are usually run from the <a href="../-command-scheduler/index.html">CommandScheduler</a>, but can be run independently if desired. Commands can be chained together to form complex multi-step actions.</p><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-basic-command/index.html">BasicCommand</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-command-group/index.html">CommandGroup</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-functional-command/index.html">FunctionalCommand</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-instant-command/index.html">InstantCommand</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-listener-command/index.html">ListenerCommand</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-repeat-command/index.html">RepeatCommand</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-select-command/index.html">SelectCommand</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-time-command/index.html">TimeCommand</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-wait-command/index.html">WaitCommand</a></div></span></div><div></div></div></div></div></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Inheritors">Inheritors</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
     <div class="tabs-section-body">
-      <h2 class="tabbedcontent">Constructors</h2>
-      <div class="table" data-togglable="Constructors"><a data-name="797343647%2FConstructors%2F-1658673126" anchor-label="Command" id="797343647%2FConstructors%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-command.html"><span><span>Command</span></span></a></div>
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="797343647%2FConstructors%2F-1658673126" anchor-label="Command" id="797343647%2FConstructors%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-command.html"><span><span>Command</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="797343647%2FConstructors%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-command.html"><span class="token function">Command</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Types</h2>
-      <div class="table" data-togglable="Types"><a data-name="-2133820815%2FClasslikes%2F-1658673126" anchor-label="Companion" id="-2133820815%2FClasslikes%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-2133820815%2FClasslikes%2F-1658673126" anchor-label="Companion" id="-2133820815%2FClasslikes%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2133820815%2FClasslikes%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Functions</h2>
-      <div class="table" data-togglable="Functions"><a data-name="-447068926%2FFunctions%2F-1658673126" anchor-label="and" id="-447068926%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="and.html"><span><span>and</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-447068926%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="and.html"><span class="token function">and</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="index.html">Command</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-parallel-command/index.html">ParallelCommand</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Adds a command to run in parallel with this one (Both run simultaneously until they finish).</p></div><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="and.html"><span class="token function">and</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">runnable<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Runnable.html">Runnable</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-parallel-command/index.html">ParallelCommand</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Adds a runnable to run in parallel with this one (Both run simultaneously until they finish).</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="1179487286%2FFunctions%2F-1658673126" anchor-label="cancel" id="1179487286%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="cancel.html"><span><span>cancel</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1179487286%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="cancel.html"><span class="token function">cancel</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Cancels this command.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-1356573240%2FFunctions%2F-1658673126" anchor-label="end" id="-1356573240%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="end.html"><span><span>end</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1356573240%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="end.html"><span class="token function">end</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/util/function/Consumer.html">Consumer</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-functional-command/index.html">FunctionalCommand</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Overrides this command's <a href="end.html">end</a> function.</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="end.html"><span class="token function">end</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">interrupted<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Runs once when this command finishes or is interrupted.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="545251341%2FFunctions%2F-1658673126" anchor-label="execute" id="545251341%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="execute.html"><span><span>execute</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="545251341%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="execute.html"><span class="token function">execute</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Runs repeatedly until <a href="is-finished.html">isFinished</a> returns true.</p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="execute.html"><span class="token function">execute</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Runnable.html">Runnable</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-functional-command/index.html">FunctionalCommand</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Overrides this command's <a href="execute.html">execute</a> function.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-347473733%2FFunctions%2F-1658673126" anchor-label="init" id="-347473733%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="init.html"><span><span>init</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-347473733%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="init.html"><span class="token function">init</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Runs once when first scheduled.</p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="init.html"><span class="token function">init</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Runnable.html">Runnable</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-functional-command/index.html">FunctionalCommand</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Overrides this command's <a href="init.html">init</a> function.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-2141794380%2FFunctions%2F-1658673126" anchor-label="isFinished" id="-2141794380%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="is-finished.html"><span>is</span><wbr><span><span>Finished</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2141794380%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-finished.html"><span class="token function">isFinished</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns whether this command is finished.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="1290087591%2FFunctions%2F-1658673126" anchor-label="isScheduled" id="1290087591%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="is-scheduled.html"><span>is</span><wbr><span><span>Scheduled</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1290087591%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-scheduled.html"><span class="token function">isScheduled</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns whether this command is currently registered with the <a href="../-command-scheduler/index.html">CommandScheduler</a>.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="2021480513%2FFunctions%2F-1658673126" anchor-label="onEnd" id="2021480513%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="on-end.html"><span>on</span><wbr><span><span>End</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2021480513%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="on-end.html"><span class="token function">onEnd</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/util/function/Consumer.html">Consumer</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-listener-command/index.html">ListenerCommand</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns a <a href="../-listener-command/index.html">ListenerCommand</a> that runs the specified action when this command is ended.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="1718347523%2FFunctions%2F-1658673126" anchor-label="onExecute" id="1718347523%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="on-execute.html"><span>on</span><wbr><span><span>Execute</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1718347523%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="on-execute.html"><span class="token function">onExecute</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Runnable.html">Runnable</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-listener-command/index.html">ListenerCommand</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns a <a href="../-listener-command/index.html">ListenerCommand</a> that runs the specified action whenever this command updates.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-518836944%2FFunctions%2F-1658673126" anchor-label="onInit" id="-518836944%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="on-init.html"><span>on</span><wbr><span><span>Init</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-518836944%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="on-init.html"><span class="token function">onInit</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Runnable.html">Runnable</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-listener-command/index.html">ListenerCommand</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns a <a href="../-listener-command/index.html">ListenerCommand</a> that runs the specified action when this command initializes.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="1845489882%2FFunctions%2F-1658673126" anchor-label="race" id="1845489882%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="race.html"><span><span>race</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1845489882%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="race.html"><span class="token function">race</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="index.html">Command</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-race-command/index.html">RaceCommand</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Adds a command to run in parallel with this one (Both run simultaneously until one finishes).</p></div><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="race.html"><span class="token function">race</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">runnable<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Runnable.html">Runnable</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-race-command/index.html">RaceCommand</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Adds a runnable to run in parallel with this one (Both run simultaneously until one finishes).</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="84811667%2FFunctions%2F-1658673126" anchor-label="repeat" id="84811667%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="repeat.html"><span><span>repeat</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="84811667%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="repeat.html"><span class="token function">repeat</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">times<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-repeat-command/index.html">RepeatCommand</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Repeats this command <a href="repeat.html">times</a> times.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-1268379426%2FFunctions%2F-1658673126" anchor-label="repeatForever" id="-1268379426%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="repeat-forever.html"><span>repeat</span><wbr><span><span>Forever</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1268379426%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="repeat-forever.html"><span class="token function">repeatForever</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-repeat-command/index.html">RepeatCommand</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Repeats this command indefinitely.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-368574602%2FFunctions%2F-1658673126" anchor-label="requires" id="-368574602%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="requires.html"><span><span>requires</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-368574602%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="requires.html"><span class="token function">requires</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>requirements<span class="token operator">: </span><a href="../-component/index.html">Component</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-functional-command/index.html">FunctionalCommand</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="requires.html"><span class="token function">requires</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">requirements<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-component/index.html">Component</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-functional-command/index.html">FunctionalCommand</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Adds <a href="requires.html">requirements</a> to this command's list of required components.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="737093311%2FFunctions%2F-1658673126" anchor-label="run" id="737093311%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="run.html"><span><span>run</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="737093311%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="run.html"><span class="token function">run</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Runs this command independently of the <a href="../-command-scheduler/index.html">CommandScheduler</a>. Initializes, executes and ends this command synchronously while also updating all of its required components and updating <a href="../-command-scheduler/telemetry.html">CommandScheduler.telemetry</a>.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-1052836076%2FFunctions%2F-1658673126" anchor-label="runForever" id="-1052836076%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="run-forever.html"><span>run</span><wbr><span><span>Forever</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1052836076%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="run-forever.html"><span class="token function">runForever</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-functional-command/index.html">FunctionalCommand</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Overrides this command's <a href="is-finished.html">isFinished</a> function to run until it is cancelled.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-1658729922%2FFunctions%2F-1658673126" anchor-label="runOnce" id="-1658729922%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="run-once.html"><span>run</span><wbr><span><span>Once</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1658729922%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="run-once.html"><span class="token function">runOnce</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-functional-command/index.html">FunctionalCommand</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Overrides this command's <a href="is-finished.html">isFinished</a> function to run only once.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-14247361%2FFunctions%2F-1658673126" anchor-label="runUntil" id="-14247361%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="run-until.html"><span>run</span><wbr><span><span>Until</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-14247361%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="run-until.html"><span class="token function">runUntil</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">condition<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/util/function/BooleanSupplier.html">BooleanSupplier</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-functional-command/index.html">FunctionalCommand</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Overrides this command's <a href="is-finished.html">isFinished</a> function to finish when <a href="run-until.html">condition</a> returns true.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-1456442887%2FFunctions%2F-1658673126" anchor-label="schedule" id="-1456442887%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="schedule.html"><span><span>schedule</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1456442887%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="schedule.html"><span class="token function">schedule</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Schedules this command.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="1970142106%2FFunctions%2F-1658673126" anchor-label="setInterruptable" id="1970142106%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="set-interruptable.html"><span>set</span><wbr><span><span>Interruptable</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1970142106%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-interruptable.html"><span class="token function">setInterruptable</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">interruptable<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Command</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Sets whether this command is interruptable.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="1611818454%2FFunctions%2F-1658673126" anchor-label="stopWhen" id="1611818454%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="stop-when.html"><span>stop</span><wbr><span><span>When</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1611818454%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="stop-when.html"><span class="token function">stopWhen</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">condition<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/util/function/BooleanSupplier.html">BooleanSupplier</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-functional-command/index.html">FunctionalCommand</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Overrides this command's <a href="is-finished.html">isFinished</a> function to finish when <a href="stop-when.html">condition</a> returns true, or, if it doesn't, when this command would normally finish.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="1791464514%2FFunctions%2F-1658673126" anchor-label="then" id="1791464514%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="then.html"><span><span>then</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1791464514%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="then.html"><span class="token function">then</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="index.html">Command</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-sequential-command/index.html">SequentialCommand</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Adds a command to run after this one.</p></div><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="then.html"><span class="token function">then</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">runnable<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Runnable.html">Runnable</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-sequential-command/index.html">SequentialCommand</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Adds a runnable to run after this one.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-214174707%2FFunctions%2F-1658673126" anchor-label="thenStopOpMode" id="-214174707%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="then-stop-op-mode.html"><span>then</span><wbr><span>Stop</span><wbr><span>Op</span><wbr><span><span>Mode</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-214174707%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="then-stop-op-mode.html"><span class="token function">thenStopOpMode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-sequential-command/index.html">SequentialCommand</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Stops the currently active OpMode after this command ends.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-69472567%2FFunctions%2F-1658673126" anchor-label="wait" id="-69472567%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="wait.html"><span><span>wait</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-69472567%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="wait.html"><span class="token function">wait</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">duration<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-sequential-command/index.html">SequentialCommand</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Waits <a href="wait.html">duration</a> seconds after this command finishes.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="634744611%2FFunctions%2F-1658673126" anchor-label="waitUntil" id="634744611%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="wait-until.html"><span>wait</span><wbr><span><span>Until</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="634744611%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="wait-until.html"><span class="token function">waitUntil</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">condition<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/util/function/BooleanSupplier.html">BooleanSupplier</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-sequential-command/index.html">SequentialCommand</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Waits until <a href="wait-until.html">condition</a> returns true after this command finishes.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-819761899%2FFunctions%2F-1658673126" anchor-label="withTimeout" id="-819761899%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="with-timeout.html"><span>with</span><wbr><span><span>Timeout</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-819761899%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="with-timeout.html"><span class="token function">withTimeout</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">duration<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-race-command/index.html">RaceCommand</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Interrupts this command if it does not finish after <a href="with-timeout.html">duration</a> seconds.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <h2 class="">Properties</h2>
-      <div class="table" data-togglable="Properties"><a data-name="1587782039%2FProperties%2F-1658673126" anchor-label="isInterruptable" id="1587782039%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="is-interruptable.html"><span>is</span><wbr><span><span>Interruptable</span></span></a></div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1587782039%2FProperties%2F-1658673126" anchor-label="isInterruptable" id="1587782039%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-interruptable.html"><span>is</span><wbr><span><span>Interruptable</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1587782039%2FProperties%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><a data-name="1587782039%2FProperties%2F-1658673126" anchor-label="isInterruptable" id="1587782039%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="is-interruptable.html">isInterruptable</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1587782039%2FProperties%2F-1658673126" anchor-label="isInterruptable" id="1587782039%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a><p class="paragraph">Whether this command can be interrupted by another command.</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="is-interruptable.html">isInterruptable</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></div><div class="brief "><p class="paragraph">Whether this command can be interrupted by another command.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-1086807904%2FProperties%2F-1658673126" anchor-label="requirements" id="-1086807904%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="requirements.html"><span><span>requirements</span></span></a></div>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="requirements.html"><span><span>requirements</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1086807904%2FProperties%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><a data-name="-1086807904%2FProperties%2F-1658673126" anchor-label="requirements" id="-1086807904%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="requirements.html">requirements</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-component/index.html">Component</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1086807904%2FProperties%2F-1658673126" anchor-label="requirements" id="-1086807904%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a><p class="paragraph">The set of components that this command uses.</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="requirements.html">requirements</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-component/index.html">Component</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">The set of components that this command uses.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="530249617%2FProperties%2F-1658673126" anchor-label="telemetry" id="530249617%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="telemetry.html"><span><span>telemetry</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="530249617%2FProperties%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><a data-name="530249617%2FProperties%2F-1658673126" anchor-label="telemetry" id="530249617%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation">JvmField</span></a></div></div><span class="token keyword">protected </span><span class="token keyword"></span><span class="token keyword">val </span><a href="telemetry.html">telemetry</a><span class="token operator">: </span><a href="../../com.amarcolini.joos.dashboard/-super-telemetry/index.html">SuperTelemetry</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+<a data-name="-178819321%2FProperties%2F-1658673126" anchor-label="telem" id="-178819321%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="telem.html"><span><span>telem</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-178819321%2FProperties%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a></div></div><span class="token keyword">protected </span><span class="token keyword"></span><span class="token keyword">val </span><a href="telem.html">telem</a><span class="token operator">: </span><a href="../../com.amarcolini.joos.dashboard/-super-telemetry/index.html">SuperTelemetry</a></div><div class="brief "><p class="paragraph">The global <a href="../../com.amarcolini.joos.dashboard/-super-telemetry/index.html">SuperTelemetry</a> instance.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Inheritors</h2>
-      <div class="table" data-togglable="Inheritors"><a data-name="-173862965%2FInheritors%2F-1658673126" anchor-label="BasicCommand" id="-173862965%2FInheritors%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="../-basic-command/index.html">BasicCommand</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-173862965%2FInheritors%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-447068926%2FFunctions%2F-1658673126" anchor-label="and" id="-447068926%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="and.html"><span><span>and</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-447068926%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="and.html"><span class="token function">and</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="index.html">Command</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-parallel-command/index.html">ParallelCommand</a></div><div class="brief "><p class="paragraph">Adds a command to run in parallel with this one (Both run simultaneously until they finish).</p></div><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="and.html"><span class="token function">and</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">runnable<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html">Runnable</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-parallel-command/index.html">ParallelCommand</a></div><div class="brief "><p class="paragraph">Adds a runnable to run in parallel with this one (Both run simultaneously until they finish).</p></div></div></div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-<a data-name="1985540340%2FInheritors%2F-1658673126" anchor-label="CommandGroup" id="1985540340%2FInheritors%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="../-command-group/index.html">CommandGroup</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1985540340%2FInheritors%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
+<a data-name="1179487286%2FFunctions%2F-1658673126" anchor-label="cancel" id="1179487286%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="cancel.html"><span><span>cancel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1179487286%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="cancel.html"><span class="token function">cancel</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Cancels this command.</p></div></div></div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-<a data-name="996630418%2FInheritors%2F-1658673126" anchor-label="FunctionalCommand" id="996630418%2FInheritors%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="../-functional-command/index.html">FunctionalCommand</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="996630418%2FInheritors%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
+<a data-name="-1356573240%2FFunctions%2F-1658673126" anchor-label="end" id="-1356573240%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="end.html"><span><span>end</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1356573240%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="end.html"><span class="token function">end</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html">Consumer</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-functional-command/index.html">FunctionalCommand</a></div><div class="brief "><p class="paragraph">Overrides this command's <a href="end.html">end</a> function.</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="end.html"><span class="token function">end</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">interrupted<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Runs once when this command finishes or is interrupted.</p></div></div></div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-<a data-name="2098996158%2FInheritors%2F-1658673126" anchor-label="InstantCommand" id="2098996158%2FInheritors%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="../-instant-command/index.html">InstantCommand</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2098996158%2FInheritors%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
+<a data-name="545251341%2FFunctions%2F-1658673126" anchor-label="execute" id="545251341%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="execute.html"><span><span>execute</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="545251341%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="execute.html"><span class="token function">execute</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Runs repeatedly until <a href="is-finished.html">isFinished</a> returns true.</p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="execute.html"><span class="token function">execute</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html">Runnable</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-functional-command/index.html">FunctionalCommand</a></div><div class="brief "><p class="paragraph">Overrides this command's <a href="execute.html">execute</a> function.</p></div></div></div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-<a data-name="683289731%2FInheritors%2F-1658673126" anchor-label="ListenerCommand" id="683289731%2FInheritors%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="../-listener-command/index.html">ListenerCommand</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="683289731%2FInheritors%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
+<a data-name="-347473733%2FFunctions%2F-1658673126" anchor-label="init" id="-347473733%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="init.html"><span><span>init</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-347473733%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="init.html"><span class="token function">init</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Runs once when first scheduled.</p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="init.html"><span class="token function">init</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html">Runnable</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-functional-command/index.html">FunctionalCommand</a></div><div class="brief "><p class="paragraph">Overrides this command's <a href="init.html">init</a> function.</p></div></div></div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-<a data-name="1504952234%2FInheritors%2F-1658673126" anchor-label="RepeatCommand" id="1504952234%2FInheritors%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="../-repeat-command/index.html">RepeatCommand</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1504952234%2FInheritors%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
+<a data-name="-2141794380%2FFunctions%2F-1658673126" anchor-label="isFinished" id="-2141794380%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-finished.html"><span>is</span><wbr><span><span>Finished</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2141794380%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-finished.html"><span class="token function">isFinished</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns whether this command is finished.</p></div></div></div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-<a data-name="1682506507%2FInheritors%2F-1658673126" anchor-label="SelectCommand" id="1682506507%2FInheritors%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="../-select-command/index.html">SelectCommand</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1682506507%2FInheritors%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
+<a data-name="1290087591%2FFunctions%2F-1658673126" anchor-label="isScheduled" id="1290087591%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-scheduled.html"><span>is</span><wbr><span><span>Scheduled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1290087591%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-scheduled.html"><span class="token function">isScheduled</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns whether this command is currently registered with the <a href="../-command-scheduler/index.html">CommandScheduler</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-<a data-name="-512183524%2FInheritors%2F-1658673126" anchor-label="TimeCommand" id="-512183524%2FInheritors%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="../-time-command/index.html">TimeCommand</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-512183524%2FInheritors%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
+<a data-name="2021480513%2FFunctions%2F-1658673126" anchor-label="onEnd" id="2021480513%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-end.html"><span>on</span><wbr><span><span>End</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2021480513%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="on-end.html"><span class="token function">onEnd</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html">Consumer</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-listener-command/index.html">ListenerCommand</a></div><div class="brief "><p class="paragraph">Returns a <a href="../-listener-command/index.html">ListenerCommand</a> that runs the specified action when this command is ended.</p></div></div></div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-<a data-name="1922388420%2FInheritors%2F-1658673126" anchor-label="WaitCommand" id="1922388420%2FInheritors%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="../-wait-command/index.html">WaitCommand</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1922388420%2FInheritors%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
+<a data-name="1718347523%2FFunctions%2F-1658673126" anchor-label="onExecute" id="1718347523%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-execute.html"><span>on</span><wbr><span><span>Execute</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1718347523%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="on-execute.html"><span class="token function">onExecute</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html">Runnable</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-listener-command/index.html">ListenerCommand</a></div><div class="brief "><p class="paragraph">Returns a <a href="../-listener-command/index.html">ListenerCommand</a> that runs the specified action whenever this command updates.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-518836944%2FFunctions%2F-1658673126" anchor-label="onInit" id="-518836944%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-init.html"><span>on</span><wbr><span><span>Init</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-518836944%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="on-init.html"><span class="token function">onInit</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html">Runnable</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-listener-command/index.html">ListenerCommand</a></div><div class="brief "><p class="paragraph">Returns a <a href="../-listener-command/index.html">ListenerCommand</a> that runs the specified action when this command initializes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1845489882%2FFunctions%2F-1658673126" anchor-label="race" id="1845489882%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="race.html"><span><span>race</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1845489882%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="race.html"><span class="token function">race</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="index.html">Command</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-race-command/index.html">RaceCommand</a></div><div class="brief "><p class="paragraph">Adds a command to run in parallel with this one (Both run simultaneously until one finishes).</p></div><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="race.html"><span class="token function">race</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">runnable<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html">Runnable</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-race-command/index.html">RaceCommand</a></div><div class="brief "><p class="paragraph">Adds a runnable to run in parallel with this one (Both run simultaneously until one finishes).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="84811667%2FFunctions%2F-1658673126" anchor-label="repeat" id="84811667%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="repeat.html"><span><span>repeat</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="84811667%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="repeat.html"><span class="token function">repeat</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">times<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-repeat-command/index.html">RepeatCommand</a></div><div class="brief "><p class="paragraph">Repeats this command <a href="repeat.html">times</a> times.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1268379426%2FFunctions%2F-1658673126" anchor-label="repeatForever" id="-1268379426%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="repeat-forever.html"><span>repeat</span><wbr><span><span>Forever</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1268379426%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="repeat-forever.html"><span class="token function">repeatForever</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-repeat-command/index.html">RepeatCommand</a></div><div class="brief "><p class="paragraph">Repeats this command indefinitely.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-368574602%2FFunctions%2F-1658673126" anchor-label="requires" id="-368574602%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="requires.html"><span><span>requires</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-368574602%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="requires.html"><span class="token function">requires</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>requirements<span class="token operator">: </span><a href="../-component/index.html">Component</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-functional-command/index.html">FunctionalCommand</a></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="requires.html"><span class="token function">requires</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">requirements<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-component/index.html">Component</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-functional-command/index.html">FunctionalCommand</a></div><div class="brief "><p class="paragraph">Adds <a href="requires.html">requirements</a> to this command's list of required components.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-178663926%2FFunctions%2F-1658673126" anchor-label="runBlocking" id="-178663926%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="run-blocking.html"><span>run</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-178663926%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="run-blocking.html"><span class="token function">runBlocking</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Runs this command independently of the <a href="../-command-scheduler/index.html">CommandScheduler</a>. Initializes, executes and ends this command synchronously while also updating all of its required components and updating <a href="../-command-scheduler/telem.html">CommandScheduler.telem</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1052836076%2FFunctions%2F-1658673126" anchor-label="runForever" id="-1052836076%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="run-forever.html"><span>run</span><wbr><span><span>Forever</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1052836076%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="run-forever.html"><span class="token function">runForever</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-functional-command/index.html">FunctionalCommand</a></div><div class="brief "><p class="paragraph">Overrides this command's <a href="is-finished.html">isFinished</a> function to run until it is cancelled.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1658729922%2FFunctions%2F-1658673126" anchor-label="runOnce" id="-1658729922%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="run-once.html"><span>run</span><wbr><span><span>Once</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1658729922%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="run-once.html"><span class="token function">runOnce</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-functional-command/index.html">FunctionalCommand</a></div><div class="brief "><p class="paragraph">Overrides this command's <a href="is-finished.html">isFinished</a> function to run only once.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-14247361%2FFunctions%2F-1658673126" anchor-label="runUntil" id="-14247361%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="run-until.html"><span>run</span><wbr><span><span>Until</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-14247361%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="run-until.html"><span class="token function">runUntil</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">condition<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BooleanSupplier.html">BooleanSupplier</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-functional-command/index.html">FunctionalCommand</a></div><div class="brief "><p class="paragraph">Overrides this command's <a href="is-finished.html">isFinished</a> function to finish when <a href="run-until.html">condition</a> returns true.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1456442887%2FFunctions%2F-1658673126" anchor-label="schedule" id="-1456442887%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="schedule.html"><span><span>schedule</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1456442887%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="schedule.html"><span class="token function">schedule</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Schedules this command.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1970142106%2FFunctions%2F-1658673126" anchor-label="setInterruptable" id="1970142106%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-interruptable.html"><span>set</span><wbr><span><span>Interruptable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1970142106%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-interruptable.html"><span class="token function">setInterruptable</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">interruptable<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Command</a></div><div class="brief "><p class="paragraph">Sets whether this command is interruptable.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1611818454%2FFunctions%2F-1658673126" anchor-label="stopWhen" id="1611818454%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="stop-when.html"><span>stop</span><wbr><span><span>When</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1611818454%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="stop-when.html"><span class="token function">stopWhen</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">condition<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BooleanSupplier.html">BooleanSupplier</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-functional-command/index.html">FunctionalCommand</a></div><div class="brief "><p class="paragraph">Overrides this command's <a href="is-finished.html">isFinished</a> function to finish when <a href="stop-when.html">condition</a> returns true, or, if it doesn't, when this command would normally finish.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1791464514%2FFunctions%2F-1658673126" anchor-label="then" id="1791464514%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="then.html"><span><span>then</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1791464514%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="then.html"><span class="token function">then</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="index.html">Command</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-sequential-command/index.html">SequentialCommand</a></div><div class="brief "><p class="paragraph">Adds a command to run after this one.</p></div><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="then.html"><span class="token function">then</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">runnable<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html">Runnable</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-sequential-command/index.html">SequentialCommand</a></div><div class="brief "><p class="paragraph">Adds a runnable to run after this one.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-214174707%2FFunctions%2F-1658673126" anchor-label="thenStopOpMode" id="-214174707%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="then-stop-op-mode.html"><span>then</span><wbr><span>Stop</span><wbr><span>Op</span><wbr><span><span>Mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-214174707%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="then-stop-op-mode.html"><span class="token function">thenStopOpMode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-sequential-command/index.html">SequentialCommand</a></div><div class="brief "><p class="paragraph">Stops the currently active OpMode after this command ends.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-69472567%2FFunctions%2F-1658673126" anchor-label="wait" id="-69472567%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="wait.html"><span><span>wait</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-69472567%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="wait.html"><span class="token function">wait</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">duration<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-sequential-command/index.html">SequentialCommand</a></div><div class="brief "><p class="paragraph">Waits <a href="wait.html">duration</a> seconds after this command finishes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="634744611%2FFunctions%2F-1658673126" anchor-label="waitUntil" id="634744611%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="wait-until.html"><span>wait</span><wbr><span><span>Until</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="634744611%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="wait-until.html"><span class="token function">waitUntil</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">condition<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/BooleanSupplier.html">BooleanSupplier</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-sequential-command/index.html">SequentialCommand</a></div><div class="brief "><p class="paragraph">Waits until <a href="wait-until.html">condition</a> returns true after this command finishes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-819761899%2FFunctions%2F-1658673126" anchor-label="withTimeout" id="-819761899%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="with-timeout.html"><span>with</span><wbr><span><span>Timeout</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-819761899%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="with-timeout.html"><span class="token function">withTimeout</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">duration<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-race-command/index.html">RaceCommand</a></div><div class="brief "><p class="paragraph">Interrupts this command if it does not finish after <a href="with-timeout.html">duration</a> seconds.</p></div></div></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -626,8 +554,9 @@ if(savedDarkMode === true){
       <div class="footer">
         <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Made by Alessandro Marcolini</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
+            </div>
+        </div>
     </div>
-</div>
-
-</body></html>
+</body>
+</html>
 

@@ -1,298 +1,304 @@
 <!doctype html>
-<html>
+<html class="no-js">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>Encoder</title>
-<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../../../styles/style.css" rel="Stylesheet">
-<link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet">
 <link href="../../../../styles/main.css" rel="Stylesheet">
 <link href="../../../../styles/prism.css" rel="Stylesheet">
 <link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
 <script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../../scripts/main.js" defer></script>
-<script type="text/javascript" src="../../../../scripts/prism.js" async></script></head>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
-<div class="navigation-wrapper" id="navigation-wrapper">
-    <div id="leftToggler"><span class="icon-toggler"></span></div>
-    <div class="library-name">
-<a href="../../../../index.html">
-<span></span>            </a>    </div>
-    <div>0.4.8
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../../index.html">
+                            
+                    </a>            </div>
+            <div class="library-version">0.4.9
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":command:dokkaHtmlPartial/main">androidJvm</button>
+        </div>
     </div>
-    <div class="pull-right d-flex">
-        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
-        <div id="searchBar"></div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
-</div>
-<div id="container">
-    <div id="leftColumn">
-        <div id="sideMenu"></div>
-    </div>
-    <div id="main">
-<div class="main-content" id="content" pageids="Command::com.amarcolini.joos.hardware/Motor.Encoder///PointingToDeclaration//-1658673126">
-  <div class="breadcrumbs"><a href="../../../index.html">Command</a><span class="delimiter">/</span><a href="../../index.html">com.amarcolini.joos.hardware</a><span class="delimiter">/</span><a href="../index.html">Motor</a><span class="delimiter">/</span><a href="index.html">Encoder</a></div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="Command::com.amarcolini.joos.hardware/Motor.Encoder///PointingToDeclaration//-1658673126">
+  <div class="breadcrumbs"><a href="../../../index.html">Command</a><span class="delimiter">/</span><a href="../../index.html">com.amarcolini.joos.hardware</a><span class="delimiter">/</span><a href="../index.html">Motor</a><span class="delimiter">/</span><span class="current">Encoder</span></div>
   <div class="cover ">
     <h1 class="cover"><span><span>Encoder</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><span class="token keyword">class </span><a href="index.html">Encoder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">A wrapper for motor encoders in the FTC SDK.</p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><span class="token keyword">class </span><a href="index.html">Encoder</a></div><p class="paragraph">A wrapper for motor encoders in the FTC SDK.</p><h4 class="">Parameters</h4><div class="table"><div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>get</span><wbr><span><span>Position</span></span></u></div></span></div><div><div class="title"><p class="paragraph">the position supplier which points to the current position of the motor in ticks</p></div></div></div></div><div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>get</span><wbr><span><span>Velocity</span></span></u></div></span></div><div><div class="title"><p class="paragraph">the position supplier which points to the current velocity of the motor in ticks per second</p></div></div></div></div></div></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Parameters">Parameters</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
     <div class="tabs-section-body">
-      <h2 class="">Parameters</h2>
-      <div data-togglable="Parameters">
-        <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="Parameters"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span><span>TPR</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">the ticks per revolution of the encoder</p></div></div></div></div></div><div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span>get</span><wbr><span><span>Position</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">the position supplier which points to the current position of the motor in ticks</p></div></div></div></div></div><div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span>get</span><wbr><span><span>Velocity</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">the position supplier which points to the current velocity of the motor in ticks per second</p></div></div></div></div></div></div></div></div></div>
-      </div>
-      <h2 class="tabbedcontent">Constructors</h2>
-      <div class="table" data-togglable="Constructors"><a data-name="842422443%2FConstructors%2F-1658673126" anchor-label="Motor.Encoder" id="842422443%2FConstructors%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-motor.-encoder.html"><span>Motor.</span><wbr><span>Encoder</span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="842422443%2FConstructors%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">Motor.Encoder</a>&nbsp;<a href="-motor.-encoder.html"><span class="token function">Motor.Encoder</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><span data-unresolved-link="com.qualcomm.robotcore.hardware/HardwareMap///PointingToDeclaration/">HardwareMap</span>&nbsp;hMap<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;id<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Double.html">Double</a>&nbsp;TPR</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Constructs an encoder from the provided <a href="../../../../command/com.amarcolini.joos.hardware/-motor/-encoder/[60]init[62].html">id</a> of the corresponding motor.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-2137280587%2FConstructors%2F-1658673126" anchor-label="Motor.Encoder" id="-2137280587%2FConstructors%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-motor.-encoder.html"><span>Motor.</span><wbr><span>Encoder</span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2137280587%2FConstructors%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">Motor.Encoder</a>&nbsp;<a href="-motor.-encoder.html"><span class="token function">Motor.Encoder</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><span data-unresolved-link="com.qualcomm.robotcore.hardware/HardwareMap///PointingToDeclaration/">HardwareMap</span>&nbsp;hMap<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;id<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Double.html">Double</a>&nbsp;TPR<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Double.html">Double</a>&nbsp;wheelRadius<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Double.html">Double</a>&nbsp;gearRatio</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Constructs an encoder from the provided <a href="../../../../command/com.amarcolini.joos.hardware/-motor/-encoder/[60]init[62].html">id</a> of the corresponding motor.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-2137280587%2FConstructors%2F-1658673126" anchor-label="Motor.Encoder" id="-2137280587%2FConstructors%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-motor.-encoder.html"><span>Motor.</span><wbr><span>Encoder</span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2137280587%2FConstructors%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">Motor.Encoder</a>&nbsp;<a href="-motor.-encoder.html"><span class="token function">Motor.Encoder</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><span data-unresolved-link="com.qualcomm.robotcore.hardware/HardwareMap///PointingToDeclaration/">HardwareMap</span>&nbsp;hMap<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;id<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Double.html">Double</a>&nbsp;TPR<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Double.html">Double</a>&nbsp;wheelRadius</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Constructs an encoder from the provided <a href="../../../../command/com.amarcolini.joos.hardware/-motor/-encoder/[60]init[62].html">id</a> of the corresponding motor.</p></div></div></div>
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="948063750%2FConstructors%2F-1658673126" anchor-label="Motor.Encoder" id="948063750%2FConstructors%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-motor.-encoder.html"><span>Motor.</span><wbr><span>Encoder</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="948063750%2FConstructors%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span><a href="index.html">Motor.Encoder</a>&nbsp;<a href="-motor.-encoder.html"><span class="token function">Motor.Encoder</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.qualcomm.robotcore.hardware/HardwareMap///PointingToDeclaration/">HardwareMap</span>&nbsp;hMap<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;id</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Constructs an encoder from the provided <a href="../../../../command/com.amarcolini.joos.hardware/-motor/-encoder/[60]init[62].html">id</a> of the corresponding motor.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Types</h2>
-      <div class="table" data-togglable="Types"><a data-name="-883703534%2FClasslikes%2F-1658673126" anchor-label="Companion" id="-883703534%2FClasslikes%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-883703534%2FClasslikes%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">class </span><a href="-companion/index.html">Companion</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <h2 class="">Functions</h2>
-      <div class="table" data-togglable="Functions"><a data-name="228735296%2FFunctions%2F-1658673126" anchor-label="getDistance" id="228735296%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="get-distance.html"><span>get</span><wbr><span><span>Distance</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="228735296%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Double.html">Double</a>&nbsp;<a href="get-distance.html"><span class="token function">getDistance</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="233606115%2FFunctions%2F-1658673126" anchor-label="getDistanceVelocity" id="233606115%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="get-distance-velocity.html"><span>get</span><wbr><span>Distance</span><wbr><span><span>Velocity</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="233606115%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Double.html">Double</a>&nbsp;<a href="get-distance-velocity.html"><span class="token function">getDistanceVelocity</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="985575052%2FFunctions%2F-1658673126" anchor-label="getPosition" id="985575052%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="get-position.html"><span>get</span><wbr><span><span>Position</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="985575052%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Integer.html">Integer</a>&nbsp;<a href="get-position.html"><span class="token function">getPosition</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-1036591784%2FFunctions%2F-1658673126" anchor-label="getVelocity" id="-1036591784%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="get-velocity.html"><span>get</span><wbr><span><span>Velocity</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1036591784%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Double.html">Double</a>&nbsp;<a href="get-velocity.html"><span class="token function">getVelocity</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="1481658460%2FFunctions%2F-1658673126" anchor-label="reset" id="1481658460%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="reset.html"><span><span>reset</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1481658460%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="reset.html"><span class="token function">reset</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Resets the encoder without having to stop the corresponding motor.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<a data-name="-155667859%2FFunctions%2F-1658673126" anchor-label="reversed" id="-155667859%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="reversed.html"><span><span>reversed</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-155667859%2FFunctions%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="index.html">Motor.Encoder</a>&nbsp;<a href="reversed.html"><span class="token function">reversed</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Reverses the encoder.</p></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <h2 class="">Properties</h2>
-      <div class="table" data-togglable="Properties"><a data-name="501546906%2FProperties%2F-1658673126" anchor-label="distance" id="501546906%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="index.html#501546906%2FProperties%2F-1658673126"><span><span>distance</span></span></a></div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="501546906%2FProperties%2F-1658673126" anchor-label="distance" id="501546906%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#501546906%2FProperties%2F-1658673126"><span><span>distance</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="501546906%2FProperties%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><a data-name="501546906%2FProperties%2F-1658673126" anchor-label="distance" id="501546906%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#501546906%2FProperties%2F-1658673126">distance</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="501546906%2FProperties%2F-1658673126" anchor-label="distance" id="501546906%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a><p class="paragraph">The distance traveled by the encoder computed using <a href="index.html#1854159412%2FProperties%2F-1658673126">distancePerRev</a>.</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#501546906%2FProperties%2F-1658673126">distance</a></div><div class="brief "><p class="paragraph">The distance traveled by the encoder computed using <a href="index.html#-2056043962%2FProperties%2F-1658673126">distancePerTick</a>.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<a data-name="1854159412%2FProperties%2F-1658673126" anchor-label="distancePerRev" id="1854159412%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="index.html#1854159412%2FProperties%2F-1658673126"><span>distance</span><wbr><span>Per</span><wbr><span><span>Rev</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1854159412%2FProperties%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><a data-name="1854159412%2FProperties%2F-1658673126" anchor-label="distancePerRev" id="1854159412%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation">JvmField</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#1854159412%2FProperties%2F-1658673126">distancePerRev</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1854159412%2FProperties%2F-1658673126" anchor-label="distancePerRev" id="1854159412%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a><p class="paragraph">The distance per revolution of the encoder.</p></div></div></div>
+<a data-name="-2056043962%2FProperties%2F-1658673126" anchor-label="distancePerTick" id="-2056043962%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-2056043962%2FProperties%2F-1658673126"><span>distance</span><wbr><span>Per</span><wbr><span><span>Tick</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2056043962%2FProperties%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#-2056043962%2FProperties%2F-1658673126">distancePerTick</a></div><div class="brief "><p class="paragraph">The distance per revolution of the encoder.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-904374211%2FProperties%2F-1658673126" anchor-label="distanceVelocity" id="-904374211%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="index.html#-904374211%2FProperties%2F-1658673126"><span>distance</span><wbr><span><span>Velocity</span></span></a></div>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-904374211%2FProperties%2F-1658673126"><span>distance</span><wbr><span><span>Velocity</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-904374211%2FProperties%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><a data-name="-904374211%2FProperties%2F-1658673126" anchor-label="distanceVelocity" id="-904374211%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#-904374211%2FProperties%2F-1658673126">distanceVelocity</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-904374211%2FProperties%2F-1658673126" anchor-label="distanceVelocity" id="-904374211%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a><p class="paragraph">The velocity of the encoder in units per second computed using <a href="index.html#1854159412%2FProperties%2F-1658673126">distancePerRev</a>.</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#-904374211%2FProperties%2F-1658673126">distanceVelocity</a></div><div class="brief "><p class="paragraph">The velocity of the encoder in units per second computed using <a href="index.html#-2056043962%2FProperties%2F-1658673126">distancePerTick</a>.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="1258386662%2FProperties%2F-1658673126" anchor-label="position" id="1258386662%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="index.html#1258386662%2FProperties%2F-1658673126"><span><span>position</span></span></a></div>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1258386662%2FProperties%2F-1658673126"><span><span>position</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1258386662%2FProperties%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><a data-name="1258386662%2FProperties%2F-1658673126" anchor-label="position" id="1258386662%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Integer.html">Integer</a>&nbsp;<a href="index.html#1258386662%2FProperties%2F-1658673126">position</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1258386662%2FProperties%2F-1658673126" anchor-label="position" id="1258386662%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a><p class="paragraph">The current position of the encoder in ticks.</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Integer.html">Integer</a>&nbsp;<a href="index.html#1258386662%2FProperties%2F-1658673126">position</a></div><div class="brief "><p class="paragraph">The current position of the encoder in ticks.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-155667859%2FProperties%2F-1658673126" anchor-label="reversed" id="-155667859%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="reversed.html"><span><span>reversed</span></span></a></div>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reversed.html"><span><span>reversed</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-155667859%2FProperties%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><a data-name="-155667859%2FProperties%2F-1658673126" anchor-label="reversed" id="-155667859%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation">JvmField</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a>&nbsp;<a href="reversed.html">reversed</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-155667859%2FProperties%2F-1658673126" anchor-label="reversed" id="-155667859%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a><p class="paragraph">Whether the encoder is reversed. Independent of motor direction.</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a>&nbsp;<a href="reversed.html">reversed</a></div><div class="brief "><p class="paragraph">Whether the encoder is reversed. Independent of motor direction.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-763780174%2FProperties%2F-1658673126" anchor-label="velocity" id="-763780174%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-763780174%2FProperties%2F-1658673126"><span><span>velocity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-763780174%2FProperties%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#-763780174%2FProperties%2F-1658673126">velocity</a></div><div class="brief "><p class="paragraph">The corrected velocity of the encoder in ticks per second, accounting for overflow.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-763780174%2FProperties%2F-1658673126" anchor-label="velocity" id="-763780174%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="index.html#-763780174%2FProperties%2F-1658673126"><span><span>velocity</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-763780174%2FProperties%2F-1658673126"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><a data-name="-763780174%2FProperties%2F-1658673126" anchor-label="velocity" id="-763780174%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a><div class="symbol monospace block"><span class="token keyword">private </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Double.html">Double</a>&nbsp;<a href="index.html#-763780174%2FProperties%2F-1658673126">velocity</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-763780174%2FProperties%2F-1658673126" anchor-label="velocity" id="-763780174%2FProperties%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a><p class="paragraph">The corrected velocity of the encoder in ticks per second, accounting for overflow.</p></div></div></div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="228735296%2FFunctions%2F-1658673126" anchor-label="getDistance" id="228735296%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-distance.html"><span>get</span><wbr><span><span>Distance</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="228735296%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Double.html">Double</a>&nbsp;<a href="get-distance.html"><span class="token function">getDistance</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="233606115%2FFunctions%2F-1658673126" anchor-label="getDistanceVelocity" id="233606115%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-distance-velocity.html"><span>get</span><wbr><span>Distance</span><wbr><span><span>Velocity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="233606115%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Double.html">Double</a>&nbsp;<a href="get-distance-velocity.html"><span class="token function">getDistanceVelocity</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="985575052%2FFunctions%2F-1658673126" anchor-label="getPosition" id="985575052%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-position.html"><span>get</span><wbr><span><span>Position</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="985575052%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Integer.html">Integer</a>&nbsp;<a href="get-position.html"><span class="token function">getPosition</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1036591784%2FFunctions%2F-1658673126" anchor-label="getVelocity" id="-1036591784%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-velocity.html"><span>get</span><wbr><span><span>Velocity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1036591784%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Double.html">Double</a>&nbsp;<a href="get-velocity.html"><span class="token function">getVelocity</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1083651114%2FFunctions%2F-1658673126" anchor-label="multiple" id="1083651114%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="multiple.html"><span><span>multiple</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1083651114%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/java/lang/SafeVarargs.html"><span class="token annotation builtin">SafeVarargs</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://developer.android.com/reference/kotlin/java/util/List.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">Motor.Encoder</a><span class="token operator">&gt;</span>&nbsp;<a href="multiple.html"><span class="token function">multiple</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.qualcomm.robotcore.hardware/HardwareMap///PointingToDeclaration/">HardwareMap</span>&nbsp;hMap<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html">Pair</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a><span class="token operator">&gt;</span>&nbsp;ids</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword">static </span><a href="https://developer.android.com/reference/kotlin/java/util/List.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">Motor.Encoder</a><span class="token operator">&gt;</span>&nbsp;<a href="multiple.html"><span class="token function">multiple</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.qualcomm.robotcore.hardware/HardwareMap///PointingToDeclaration/">HardwareMap</span>&nbsp;hMap<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a>&nbsp;ids</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Utility method for constructing multiple encoders with the same specifications.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1481658460%2FFunctions%2F-1658673126" anchor-label="reset" id="1481658460%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reset.html"><span><span>reset</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1481658460%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>&nbsp;<a href="reset.html"><span class="token function">reset</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Resets the encoder without having to stop the corresponding motor.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-155667859%2FFunctions%2F-1658673126" anchor-label="reversed" id="-155667859%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reversed.html"><span><span>reversed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-155667859%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="index.html">Motor.Encoder</a>&nbsp;<a href="reversed.html"><span class="token function">reversed</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Reverses the encoder.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-556695668%2FFunctions%2F-1658673126" anchor-label="setReversed" id="-556695668%2FFunctions%2F-1658673126" data-filterable-set=":command:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":command:dokkaHtmlPartial/main" data-filterable-set=":command:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-reversed.html"><span>set</span><wbr><span><span>Reversed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-556695668%2FFunctions%2F-1658673126"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":command:dokkaHtmlPartial/main"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">final </span><span class="token keyword"></span><a href="index.html">Motor.Encoder</a>&nbsp;<a href="set-reversed.html"><span class="token function">setReversed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/java/lang/Boolean.html">Boolean</a>&nbsp;reversed</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
@@ -304,8 +310,9 @@ if(savedDarkMode === true){
       <div class="footer">
         <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Made by Alessandro Marcolini</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
+            </div>
+        </div>
     </div>
-</div>
-
-</body></html>
+</body>
+</html>
 

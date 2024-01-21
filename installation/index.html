@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/joos_docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.745132047568">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.759136494802">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.1.0">
+    <meta name="generator" content="Retype 3.5.0">
 
     <!-- Primary Meta Tags -->
     <title>Installation - Joos Docs</title>
@@ -34,15 +34,15 @@
     <meta property="twitter:description" content="If you haven't already, download the FTC SDK from its GitHub repository.">
     <meta property="twitter:image" content="https://amarcolini.github.io/joos_docs/assets/quickstart_download.gif">
 
-    <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/joos_docs/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
+    <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../favicon.ico" rel="icon">
-    <link href="../resources/css/retype.css?v=3.1.0.745132047568" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.5.0.759136494802" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.1.0.745132047568" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.1.0.745132047568" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.1.0.745132047568" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.759136494802" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.759136494802" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.5.0.759136494802" defer></script>
 
     <style>
         * {
@@ -111,6 +111,7 @@
         .filetree ul>li li:last-child:after {
             height: 10px;    
         }
+        .nocolumn div div
     </style>
 
     <script>
@@ -424,7 +425,6 @@
                             <div class="docs-markdown" id="docs-content">
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
-                
                                 <!-- Page content  -->
 <doc-anchor-target id="installation" class="break-words">
     <h1>
@@ -441,62 +441,8 @@
 <ol>
 <li><p>If you haven&#x27;t already, download the <a href="https://github.com/FIRST-Tech-Challenge/FtcRobotController">FTC SDK</a> from its GitHub repository.</p>
 </li>
-<li><p>In the <code v-pre>build.dependencies.gradle</code> file, add the following lines to the repositories block and the Joos import in the dependencies block:</p>
+<li><p>Open the TeamCode <code v-pre>build.gradle</code> file:</p>
 </li>
-</ol>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<div class="codeblock-title">build.dependencies.gradle</div>
-<pre class="language-groovy" data-line="4-5,24"><code v-pre class="language-groovy">repositories {
-    mavenCentral()
-    google() // Needed for androidx
-    maven { url = 'https://jitpack.io' }
-    maven { url = 'https://maven.brott.dev/' }
-    flatDir {
-        dirs rootProject.file('libs')
-    }
-}
-
-dependencies {
-    implementation 'org.firstinspires.ftc:Inspection:7.2.0'
-    implementation 'org.firstinspires.ftc:Blocks:7.2.0'
-    implementation 'org.firstinspires.ftc:Tfod:7.2.0'
-    implementation 'org.firstinspires.ftc:RobotCore:7.2.0'
-    implementation 'org.firstinspires.ftc:RobotServer:7.2.0'
-    implementation 'org.firstinspires.ftc:OnBotJava:7.2.0'
-    implementation 'org.firstinspires.ftc:Hardware:7.2.0'
-    implementation 'org.firstinspires.ftc:FtcCommon:7.2.0'
-    implementation 'org.tensorflow:tensorflow-lite-task-vision:0.2.0'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'org.firstinspires.ftc:gameAssets-FreightFrenzy:1.0.0'
-
-    implementation 'com.github.amarcolini.joos:command:0.4.8'
-}</code></pre>
-</doc-codeblock></div>
-<p>If you don&#x27;t want to utilize all of Joos&#x27; capabilities, but just want its core navigation       features, you can replace &#x27;command&#x27; with &#x27;navigation&#x27; in the import statement.</p>
-<ol start="3">
-<li>Since Joos uses newer Java features, it isn&#x27;t compatible with Android SDK versions 23 and lower. In the <code v-pre>build.common.gradle</code> file, change <code v-pre>minSdkVersion</code> from 23 to 24:</li>
-</ol>
-<div class="codeblock-wrapper"><doc-codeblock>
-<div class="codeblock-title">build.common.gradle</div>
-<pre class="language-groovy" data-line="6"><code v-pre class="language-groovy">android {
-    ...
-    defaultConfig {
-        signingConfig signingConfigs.debug
-        applicationId 'com.qualcomm.ftcrobotcontroller'
-        minSdkVersion 24
-        //noinspection ExpiredTargetSdkVersion
-        targetSdkVersion 28
-
-        ...
-    }
-    ...
-}
-...</code></pre>
-</doc-codeblock></div>
-<p>Note that if you are just using the navigation module, this step isn&#x27;t necessary.</p>
-<ol start="4">
-<li>If you want to use Joos&#x27; FTC Dashboard integration, then you&#x27;ll need to install Joos&#x27; custom annotation processor. Open
-the TeamCode <code v-pre>build.gradle</code> file:</li>
 </ol>
 <div class="filetree">
 <ul>
@@ -508,7 +454,7 @@ the TeamCode <code v-pre>build.gradle</code> file:</li>
 <ul>
 <li>/lib</li>
 <li>/src</li>
-<li><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-white bg-gray-700 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
+<li><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-white bg-gray-700 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
     <span>build.gradle</span>
 </span> (this one)</li>
 </ul>
@@ -529,22 +475,44 @@ the TeamCode <code v-pre>build.gradle</code> file:</li>
 </li>
 </ul>
 </div>
-<p>And add the annotation processor to the dependencies block:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-groovy" data-line="10"><code v-pre class="language-groovy">// Custom definitions may go here
+<ol start="3">
+<li>In the <code v-pre>build.gradle</code> file in the TeamCode folder, add the following repositories block and the Joos imports in the dependencies block:</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock line-numbers>
+<div class="codeblock-title">build.gradle</div>
+<pre class="language-groovy" data-line="2-5,23-24"><code v-pre class="language-groovy">// Custom definitions may go here
+repositories {
+    maven { url = 'https://jitpack.io' }
+    maven { url = 'https://maven.brott.dev/' }
+}
 
 // Include common definitions from above.
 apply from: '../build.common.gradle'
 apply from: '../build.dependencies.gradle'
 
+android {
+    namespace = 'org.firstinspires.ftc.teamcode'
+
+    packagingOptions {
+        jniLibs.useLegacyPackaging true
+    }
+}
+
 dependencies {
     implementation project(':FtcRobotController')
     annotationProcessor files('lib/OpModeAnnotationProcessor.jar')
-    annotationProcessor &quot;com.github.amarcolini.joos:annotation:0.4.8&quot;
+
+    implementation &quot;com.amarcolini.joos:command:0.4.9&quot;
+    annotationProcessor &quot;com.amarcolini.joos:annotation:0.4.9&quot;
 }</code></pre>
 </doc-codeblock></div>
-<p>If you&#x27;re using Kotlin instead of Java, you&#x27;ll have to use <a href="https://kotlinlang.org/docs/ksp-overview.html">KSP</a> to install the annotation processor.</p>
-<ol start="5">
+<ul>
+<li><p>If you don&#x27;t want to utilize all of Joos&#x27; capabilities, but just want its core navigation features, you can replace &#x27;command&#x27; with &#x27;navigation&#x27; in the import statement and remove the annotation processor.</p>
+</li>
+<li><p>If you&#x27;re using Kotlin instead of Java, you&#x27;ll have to use <a href="https://kotlinlang.org/docs/ksp-overview.html">KSP</a> to install the annotation processor.</p>
+</li>
+</ul>
+<ol start="4">
 <li>That&#x27;s it! Get started, or keep reading.</li>
 </ol>
 <doc-anchor-target id="quickstart">
@@ -559,24 +527,21 @@ dependencies {
     <figcaption class="caption">Downloading the Quickstart</figcaption>
 </figure>
 </p>
-<p>After that, you should be good to go! The quickstart comes with additional tuning OpModes, and for further instructions on those, head to the [quickstart reference].</p>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
-                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-            <h5><span class="docs-emoji">&#x1F6A7;</span> Warning <span class="docs-emoji">&#x1F6A7;</span></h5>
-<p>This section is under construction.</p>
-        </div>
+<p>After that, you should be good to go! The quickstart comes with additional tuning OpModes, and for further instructions on those, head to the quickstart.</p>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2">Quickstart Overview</span>
     </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>../quickstart/quickstart_overview/</span>
+    </div>
+    <a href="../quickstart/quickstart_overview/" class="absolute block inset-0"></a>
 </div>
+</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -602,10 +567,10 @@ dependencies {
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../command/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../quickstart/quickstart_overview/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">The Command System</span>
+                                                <span class="block mt-1">Quickstart Overview</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -649,6 +614,6 @@ dependencies {
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Installation", level: 1, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Installation", level: 1, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>

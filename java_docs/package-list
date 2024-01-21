@@ -1,17 +1,30 @@
 $dokka.format:html-v1
 $dokka.linkExtension:html
-
+$dokka.location:com.amarcolini.joos.command/Command.Companion/emptyCommand/#/PointingToDeclaration/Command/com.amarcolini.joos.command/-command/empty-command.html
+$dokka.location:com.amarcolini.joos.command/Command.Companion/of/#java.lang.Runnable/PointingToDeclaration/Command/com.amarcolini.joos.command/-command/of.html
+$dokka.location:com.amarcolini.joos.command/Command.Companion/select/#kotlin.Array[com.amarcolini.joos.command.Component]#java.util.function.Supplier[com.amarcolini.joos.command.Command]/PointingToDeclaration/Command/com.amarcolini.joos.command/-command/select.html
+$dokka.location:com.amarcolini.joos.dashboard/CustomProvider.Companion/of/#kotlin.reflect.KMutableProperty0[TypeParam(bounds=[kotlin.Any?])]/PointingToDeclaration/Command/com.amarcolini.joos.dashboard/-custom-provider/of.html
+$dokka.location:com.amarcolini.joos.dashboard/CustomProvider.Companion/of/#kotlin.reflect.KMutableProperty1[TypeParam(bounds=[kotlin.Any?]),TypeParam(bounds=[kotlin.Any?])]#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/Command/com.amarcolini.joos.dashboard/-custom-provider/of.html
+$dokka.location:com.amarcolini.joos.geometry/Angle.Companion/deg/#kotlin.Double/PointingToDeclaration/Navigation/com.amarcolini.joos.geometry/-angle/deg.html
+$dokka.location:com.amarcolini.joos.geometry/Angle.Companion/rad/#kotlin.Double/PointingToDeclaration/Navigation/com.amarcolini.joos.geometry/-angle/rad.html
+$dokka.location:com.amarcolini.joos.geometry/Vector2d.Static/polar/#kotlin.Double#com.amarcolini.joos.geometry.Angle/PointingToDeclaration/Navigation/com.amarcolini.joos.geometry/-vector2d/polar.html
+$dokka.location:com.amarcolini.joos.hardware/Motor.Encoder.Companion/multiple/#com.qualcomm.robotcore.hardware.HardwareMap#kotlin.Array[kotlin.Pair[kotlin.String,kotlin.Boolean]]/PointingToDeclaration/Command/com.amarcolini.joos.hardware/-motor/-encoder/multiple.html
+$dokka.location:com.amarcolini.joos.hardware/Motor.Encoder.Companion/multiple/#com.qualcomm.robotcore.hardware.HardwareMap#kotlin.Array[kotlin.String]/PointingToDeclaration/Command/com.amarcolini.joos.hardware/-motor/-encoder/multiple.html
+$dokka.location:com.amarcolini.joos.localization/AngleSensor.Companion/from/#kotlin.Function0[com.amarcolini.joos.geometry.Angle]#kotlin.Function0[com.amarcolini.joos.geometry.Angle?]/PointingToDeclaration/Navigation/com.amarcolini.joos.localization/-angle-sensor/from.html
+$dokka.location:com.amarcolini.joos.path/CircularArc.Companion/fromPoint/#com.amarcolini.joos.geometry.Vector2d#com.amarcolini.joos.geometry.Angle#kotlin.Double#com.amarcolini.joos.geometry.Angle/PointingToDeclaration/Navigation/com.amarcolini.joos.path/-circular-arc/from-point.html
+$dokka.location:com.amarcolini.joos.serialization/SerializableTrajectory.Companion/fromJSON/#kotlin.String/PointingToDeclaration/Navigation/com.amarcolini.joos.serialization/-serializable-trajectory/from-j-s-o-n.html
+$dokka.location:com.amarcolini.joos.trajectory.constraints/DriveVelocityConstraint.Companion/forMecanum/#kotlin.Double#kotlin.Double#kotlin.Double#kotlin.Double/PointingToDeclaration/Navigation/com.amarcolini.joos.trajectory.constraints/-drive-velocity-constraint/for-mecanum.html
+$dokka.location:com.amarcolini.joos.trajectory.constraints/DriveVelocityConstraint.Companion/forSwerve/#kotlin.Double#kotlin.collections.List[com.amarcolini.joos.geometry.Vector2d]/PointingToDeclaration/Navigation/com.amarcolini.joos.trajectory.constraints/-drive-velocity-constraint/for-swerve.html
+$dokka.location:com.amarcolini.joos.trajectory.constraints/DriveVelocityConstraint.Companion/forTank/#kotlin.Double#kotlin.Double/PointingToDeclaration/Navigation/com.amarcolini.joos.trajectory.constraints/-drive-velocity-constraint/for-tank.html
+$dokka.location:com.amarcolini.joos.util/DoubleProgression.Companion/fromClosedInterval/#kotlin.Double#kotlin.Double#kotlin.Int/PointingToDeclaration/Navigation/com.amarcolini.joos.util/-double-progression/from-closed-interval.html
+$dokka.location:com.amarcolini.joos.util/PositionPathGVF.Companion/createRecticircle/#com.amarcolini.joos.geometry.Vector2d#com.amarcolini.joos.geometry.Vector2d#kotlin.Double/PointingToDeclaration/Navigation/com.amarcolini.joos.util/-position-path-g-v-f/create-recticircle.html
 module:Command
 com.amarcolini.joos.command
 com.amarcolini.joos.dashboard
+com.amarcolini.joos.extensions
 com.amarcolini.joos.gamepad
 com.amarcolini.joos.hardware
 com.amarcolini.joos.hardware.drive
-module:GUI
-com.amarcolini.joos.gui
-com.amarcolini.joos.gui.rendering
-com.amarcolini.joos.gui.style
-com.amarcolini.joos.gui.trajectory
 module:Navigation
 com.amarcolini.joos.control
 com.amarcolini.joos.drive
@@ -22,7 +35,7 @@ com.amarcolini.joos.localization
 com.amarcolini.joos.path
 com.amarcolini.joos.path.heading
 com.amarcolini.joos.profile
+com.amarcolini.joos.serialization
 com.amarcolini.joos.trajectory
-com.amarcolini.joos.trajectory.config
 com.amarcolini.joos.trajectory.constraints
 com.amarcolini.joos.util

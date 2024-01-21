@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/joos_docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.745132047568">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.759136494802">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.1.0">
+    <meta name="generator" content="Retype 3.5.0">
 
     <!-- Primary Meta Tags -->
     <title>Component - Joos Docs</title>
@@ -32,15 +32,15 @@
     <meta property="twitter:title" content="Component - Joos Docs">
     <meta property="twitter:description" content="A Component has one main method, update, which is repeatedly called by the CommandScheduler. In addition, ">
 
-    <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("/joos_docs/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
+    <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../favicon.ico" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.1.0.745132047568" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.759136494802" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.1.0.745132047568" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.1.0.745132047568" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.1.0.745132047568" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.759136494802" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.759136494802" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.759136494802" defer></script>
 
     <style>
         * {
@@ -109,6 +109,7 @@
         .filetree ul>li li:last-child:after {
             height: 10px;    
         }
+        .nocolumn div div
     </style>
 
     <script>
@@ -422,7 +423,6 @@
                             <div class="docs-markdown" id="docs-content">
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
-                
                                 <!-- Page content  -->
 <doc-anchor-target id="component" class="break-words">
     <h1>
@@ -465,7 +465,7 @@ Component.of(
     </h2>
 </doc-anchor-target>
 <p><code v-pre>AbstractComponent</code> is an abstract version of <code v-pre>Component</code> with several utility methods that make your life easier.</p>
-<p>Currently, the only added functionality <code v-pre>AbstractComponent</code> provides is support for subcomponents, like <code v-pre>Motor</code>s and <code v-pre>Servo</code>s, that need their own update methods called, but aren&#x27;t a separate component of the robot. To add a subcomponent, use <code v-pre>subcomponents.add()</code>, and if you override <code v-pre>update()</code>, make sure to insert a call to <code v-pre>super.update()</code> as well.</p>
+<p>Currently, the only added functionality <code v-pre>AbstractComponent</code> provides is support for subcomponents, like <code v-pre>Motor</code>s and <code v-pre>Servo</code>s, that need their own update methods called, but aren&#x27;t a separate component of the robot. It also gives you <code v-pre>telem</code> to access <a href="../../dashboard/#supertelemetry"><code v-pre>SuperTelemetry</code></a>. To add a subcomponent, use <code v-pre>subcomponents.add()</code>, and if you override <code v-pre>update()</code>, make sure to insert a call to <code v-pre>super.update()</code> as well.</p>
 <div class="sync">
 <doc-tabs>
 <doc-tab v-cloak id="java">
@@ -581,6 +581,6 @@ class MyComponent(subcomponent: Motor) : AbstractComponent() {
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Component", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Component", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
