@@ -25,11 +25,11 @@ If you have encoders separate from your drive motors, you can use `EncoderDirect
 
 ### Localization Tuning
 
-The first step to tuning your localization is `ForwardPushTest` (and `LateralPushTest` if you're using mecanum drive). Push the robot forwards a specific distance, and measure it. The telemetry will print out the estimated distance (in ticks, initially). Multiply your `distancePerTick` (in `SampleMecanumDrive`) by the actual distance divided by the estimated distance. To get a more accurate result, you can take the average of multiple repetitions of this process.
+The first step to tuning your localization is `ForwardPushTest` (and `LateralPushTest` if you're using mecanum drive). Push the robot forwards a specific distance, and measure it. The telemetry will print out the estimated distance in ticks. Multiply your `distancePerTick` (in `SampleMecanumDrive` or your sample drive class) by the actual distance divided by the estimated distance. To get a more accurate result, you can take the average of multiple repetitions of this process.
 
 For mecanum drives, since they move slower when strafing, a separate number has to account for distance travelled when strafing. Repeat the same pushing process as for `ForwardTest`, except this time to the left. Multiply `lateralMultiplier` (in `SampleMecanumDrive`) by the actual distance divided by the estimated distance. This number should be less than one.
 
-Once you've completed the push tests, you can determine the position of your encoders through either `AngularRampLogger` or `EncoderPositionTuner`, the former being automatic and the latter manual. Both accomplish the same thing. For `AngularRampLogger`, the robot will spin counter-clockwise for 5 seconds (by default) to determine the position of your encoders. For `EncoderPositionTuner`, you will have to spin the robot *exactly* 10 times counter-clockwise (by default) with the right joystick and then press A/X (Xbox/PS) to get your positions.
+Once you've completed the push tests, you can determine the position of your encoders through either `AngularRampLogger` or `EncoderPositionTuner`, the former being automatic and the latter manual. Both accomplish the same thing, but may yield different results. For `AngularRampLogger`, the robot will spin counter-clockwise for 5 seconds (by default) to determine the position of your encoders. For `EncoderPositionTuner`, you will have to spin the robot *exactly* 10 times counter-clockwise (by default) with the right joystick and then press A/X (Xbox/PS) to get your positions.
 
 That's it! You can run `LocalizationTest` to test your localization accuracy. If you find it lacking, you can either repeat the previous tuning steps or fine-tune your constants manually.
 
@@ -37,7 +37,7 @@ That's it! You can run `LocalizationTest` to test your localization accuracy. If
 
 Run `ManualFeedforwardTuner`. The robot will eventually move back and forth roughly 4 feet, once all values are tuned. It's recommended for this step and for the feedback tuning to use [FTC Dashboard](https://github.com/acmerobotics/ftc-dashboard). It comes pre-installed with the quickstart, so there's no setup required.
 
-Begin by setting all your feedforward values (found in `feedforward` in `SampleMecanumDrive`) to 0. Then follow these steps:
+Begin by setting all your feedforward values (found in `feedforward` in `SampleMecanumDrive` or your sample drive class) to 0. Then follow these steps:
 
 1. Increase kStatic until the robot just barely starts to move.
 2. Increase kV until the robot reaches the maximum target speed. It's easier to see this with FTC Dashboard's graph view.
@@ -47,7 +47,7 @@ If at any point the robot drifts away from where you want it, you can press Y/â–
 
 ### Feedback tuning
 
-Run `ManualFeedbackTuner`. The robot will move forward and back while turning. The variables to modify here are all those that end in "coeffs" in `SampleMecanumDrive`. These are the PID coefficients for a basic trajectory-following controller. To tune them, first set them all to 0, then:
+Run `ManualFeedbackTuner`. The robot will move forward and back while turning. The variables to modify here are all those that end in "coeffs" in `SampleMecanumDrive` (or whatever drive class you're using). These are the PID coefficients for a basic trajectory-following controller. To tune them, first set them all to 0, then:
 
 1. Increase kP to reduce error
 2. If you feel it is necessary, increase kD slightly to dampen oscillations.
