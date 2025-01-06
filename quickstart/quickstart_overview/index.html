@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/joos_docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.759136494802">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.789457404530">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.5.0">
+    <meta name="generator" content="Retype 3.6.0">
 
     <!-- Primary Meta Tags -->
     <title>Quickstart Overview - Joos Docs</title>
@@ -35,11 +35,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../favicon.ico" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.5.0.759136494802" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.789457404530" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.759136494802" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.759136494802" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.789457404530" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.789457404530" data-turbo-eval="false" defer></script>
 
     <style>
         * {
@@ -452,9 +452,9 @@
         <span>Localization Tuning</span>
     </h3>
 </doc-anchor-target>
-<p>The first step to tuning your localization is <code v-pre>ForwardPushTest</code> (and <code v-pre>LateralPushTest</code> if you&#x27;re using mecanum drive). Push the robot forwards a specific distance, and measure it. The telemetry will print out the estimated distance (in ticks, initially). Multiply your <code v-pre>distancePerTick</code> (in <code v-pre>SampleMecanumDrive</code>) by the actual distance divided by the estimated distance. To get a more accurate result, you can take the average of multiple repetitions of this process.</p>
+<p>The first step to tuning your localization is <code v-pre>ForwardPushTest</code> (and <code v-pre>LateralPushTest</code> if you&#x27;re using mecanum drive). Push the robot forwards a specific distance, and measure it. The telemetry will print out the estimated distance in ticks. Multiply your <code v-pre>distancePerTick</code> (in <code v-pre>SampleMecanumDrive</code> or your sample drive class) by the actual distance divided by the estimated distance. To get a more accurate result, you can take the average of multiple repetitions of this process.</p>
 <p>For mecanum drives, since they move slower when strafing, a separate number has to account for distance travelled when strafing. Repeat the same pushing process as for <code v-pre>ForwardTest</code>, except this time to the left. Multiply <code v-pre>lateralMultiplier</code> (in <code v-pre>SampleMecanumDrive</code>) by the actual distance divided by the estimated distance. This number should be less than one.</p>
-<p>Once you&#x27;ve completed the push tests, you can determine the position of your encoders through either <code v-pre>AngularRampLogger</code> or <code v-pre>EncoderPositionTuner</code>, the former being automatic and the latter manual. Both accomplish the same thing. For <code v-pre>AngularRampLogger</code>, the robot will spin counter-clockwise for 5 seconds (by default) to determine the position of your encoders. For <code v-pre>EncoderPositionTuner</code>, you will have to spin the robot <em>exactly</em> 10 times counter-clockwise (by default) with the right joystick and then press A/X (Xbox/PS) to get your positions.</p>
+<p>Once you&#x27;ve completed the push tests, you can determine the position of your encoders through either <code v-pre>AngularRampLogger</code> or <code v-pre>EncoderPositionTuner</code>, the former being automatic and the latter manual. Both accomplish the same thing, but may yield different results. For <code v-pre>AngularRampLogger</code>, the robot will spin counter-clockwise for 5 seconds (by default) to determine the position of your encoders. For <code v-pre>EncoderPositionTuner</code>, you will have to spin the robot <em>exactly</em> 10 times counter-clockwise (by default) with the right joystick and then press A/X (Xbox/PS) to get your positions.</p>
 <p>That&#x27;s it! You can run <code v-pre>LocalizationTest</code> to test your localization accuracy. If you find it lacking, you can either repeat the previous tuning steps or fine-tune your constants manually.</p>
 <doc-anchor-target id="feedforward-tuning">
     <h3>
@@ -463,7 +463,7 @@
     </h3>
 </doc-anchor-target>
 <p>Run <code v-pre>ManualFeedforwardTuner</code>. The robot will eventually move back and forth roughly 4 feet, once all values are tuned. It&#x27;s recommended for this step and for the feedback tuning to use <a href="https://github.com/acmerobotics/ftc-dashboard">FTC Dashboard</a>. It comes pre-installed with the quickstart, so there&#x27;s no setup required.</p>
-<p>Begin by setting all your feedforward values (found in <code v-pre>feedforward</code> in <code v-pre>SampleMecanumDrive</code>) to 0. Then follow these steps:</p>
+<p>Begin by setting all your feedforward values (found in <code v-pre>feedforward</code> in <code v-pre>SampleMecanumDrive</code> or your sample drive class) to 0. Then follow these steps:</p>
 <ol>
 <li>Increase kStatic until the robot just barely starts to move.</li>
 <li>Increase kV until the robot reaches the maximum target speed. It&#x27;s easier to see this with FTC Dashboard&#x27;s graph view.</li>
@@ -476,7 +476,7 @@
         <span>Feedback tuning</span>
     </h3>
 </doc-anchor-target>
-<p>Run <code v-pre>ManualFeedbackTuner</code>. The robot will move forward and back while turning. The variables to modify here are all those that end in &quot;coeffs&quot; in <code v-pre>SampleMecanumDrive</code>. These are the PID coefficients for a basic trajectory-following controller. To tune them, first set them all to 0, then:</p>
+<p>Run <code v-pre>ManualFeedbackTuner</code>. The robot will move forward and back while turning. The variables to modify here are all those that end in &quot;coeffs&quot; in <code v-pre>SampleMecanumDrive</code> (or whatever drive class you&#x27;re using). These are the PID coefficients for a basic trajectory-following controller. To tune them, first set them all to 0, then:</p>
 <ol>
 <li>Increase kP to reduce error</li>
 <li>If you feel it is necessary, increase kD slightly to dampen oscillations.</li>
